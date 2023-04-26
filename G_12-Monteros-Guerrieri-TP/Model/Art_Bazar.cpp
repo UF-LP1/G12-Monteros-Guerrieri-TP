@@ -10,6 +10,14 @@
  */
 
 
-void Art_Bazar::Art_Bazar() {
+Art_Bazar::Art_Bazar() {
 
+}
+
+Art_Bazar::Art_Bazar()
+{
+}
+
+Art_Bazar::~Art_Bazar()
+{
 }

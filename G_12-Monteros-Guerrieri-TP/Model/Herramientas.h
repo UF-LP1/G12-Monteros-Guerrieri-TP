@@ -12,15 +12,17 @@
 class Herramientas: public Art_ferr {
 public: 
     
+    Herramientas();
+
 /**
  * @param string
  */
-void set_modelo(void string);
+void set_modelo( string);
     
 string get_modelo();
 protected: 
     
-void Herramientas();
+
 private: 
     string Modelo;
 };

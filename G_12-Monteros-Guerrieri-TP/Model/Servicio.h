@@ -3,11 +3,15 @@
  */
 
 
+#include <string>
 #ifndef _SERVICIO_H
 #define _SERVICIO_H
+using namespace std;
 
 class Servicio {
 public: 
+    Servicio();
+    ~Servicio();
     string Nombre_servicio;
     bool disponible;
     
@@ -15,10 +19,10 @@ public:
  * @param string
  * @param bool
  */
-void servicio(void string, void bool);
+void servicio( string,  bool);
 protected: 
     
-void servicio();
+
 };
 
 #endif //_SERVICIO_H

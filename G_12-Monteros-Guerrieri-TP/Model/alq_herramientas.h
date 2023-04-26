@@ -6,32 +6,36 @@
 #ifndef _ALQ_HERRAMIENTAS_H
 #define _ALQ_HERRAMIENTAS_H
 
+#include <string>
+using namespace std;
+
 class alq_herramientas {
 public: 
     
+    alq_herramientas();
 /**
  * @param unsigned int
  */
-void set_dias(void unsigned int);
+void set_dias( unsigned int);
     
 unsigned int get_dias();
     
 /**
  * @param unsigned int
  */
-void set_seguro(void unsigned int);
+void set_seguro( unsigned int);
     
 unsigned int get_seguro();
     
 /**
  * @param string
  */
-void set_dir_alquilante(void string);
+void set_dir_alquilante(string);
     
 /**
  * @param string
  */
-void set_alquilante(void string);
+void set_alquilante(string);
     
 string get_alquilante();
     

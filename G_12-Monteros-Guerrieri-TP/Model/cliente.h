@@ -3,13 +3,16 @@
  */
 
 
+#include <string>
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
+using namespace std;
 
 class cliente {
 public: 
-    enum.pago metodo_pago;
     
+    cliente();
+
 unsigned int get_tarjeta();
     
 unsigned int get_DNI();
@@ -28,7 +31,7 @@ string set_producto_deseado();
  * @param unsigned int stock
  * @param unsigned int precio
  */
-void comprar_articulos(void unsigned int stock, void unsigned int precio);
+void comprar_articulos( unsigned int stock,  unsigned int precio);
     
 void alquilar_herramientas();
     
@@ -37,7 +40,7 @@ void contratar_servicio();
 void devolver_art();
 protected: 
     
-void cliente();
+
 private: 
     const string Nombre_cliente;
     unsigned int Numero_de_tarjeta;

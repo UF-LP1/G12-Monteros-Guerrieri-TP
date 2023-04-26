@@ -13,6 +13,12 @@
 /**
  * @return unsigned int
  */
+cliente::cliente()
+{
+}
+cliente::~cliente()
+{
+}
 unsigned int cliente::get_tarjeta() {
     return null;
 }
@@ -65,6 +71,10 @@ string cliente::set_producto_deseado() {
  */
 void cliente::comprar_articulos(void unsigned int stock, void unsigned int precio) {
 
+}
+
+void cliente::comprar_articulos(unsigned int stock, unsigned int precio)
+{
 }
 
 void cliente::alquilar_herramientas() {

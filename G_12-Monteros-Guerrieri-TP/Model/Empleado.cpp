@@ -10,6 +10,14 @@
  */
 
 
+Empleado::Empleado()
+{
+}
+
+Empleado::~Empleado()
+{
+}
+
 void Empleado::get_servicio() {
 
 }
@@ -24,6 +32,9 @@ void Empleado::set_disponibilidad(void bool) {
 /**
  * @return bool
  */
+void Empleado::set_disponibilidad(bool)
+{
+}
 bool Empleado::get_disponibilidad() {
     return false;
 }

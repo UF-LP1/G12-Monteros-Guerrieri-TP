@@ -10,6 +10,10 @@
  */
 
 
-void Plomero::Plomero() {
+Plomero::Plomero() {
 
+}
+
+Plomero::~Plomero()
+{
 }

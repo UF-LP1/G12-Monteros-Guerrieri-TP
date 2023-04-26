@@ -11,6 +11,9 @@
 
 class Cerrajero: public Empleado {
 public: 
+
+    Cerrajero();
+
     unsigned int alcance_servicio_km;
     
 unsigned int set_alcance();
@@ -18,7 +21,7 @@ unsigned int set_alcance();
 unsigned int get_alcance();
 protected: 
     
-void Plomero();
+
 };
 
 #endif //_CERRAJERO_H

@@ -13,3 +13,11 @@
 void Cambio::Cambio() {
 
 }
+
+Cambio::Cambio()
+{
+}
+
+Cambio::~Cambio()
+{
+}

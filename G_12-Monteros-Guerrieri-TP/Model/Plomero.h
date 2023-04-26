@@ -11,10 +11,13 @@
 
 class Plomero: public Empleado {
 public: 
+    Plomero();
+    ~Plomero();
+
     unsigned int alcance_servicio_km;
 protected: 
     
-void Plomero();
+
 };
 
 #endif //_PLOMERO_H

@@ -13,6 +13,12 @@
 /**
  * @return const string
  */
+Articulos::Articulos()
+{
+}
+Articulos::~Articulos()
+{
+}
 const string Articulos::get_nombre_art() {
     return null;
 }

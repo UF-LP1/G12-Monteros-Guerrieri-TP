@@ -10,9 +10,12 @@
 
 
 class Art_Bazar: public Articulos {
+
 protected: 
     
-void Art_Bazar();
+public:
+    Art_Bazar();
+
 };
 
 #endif //_ART_BAZAR_H

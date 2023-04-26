@@ -12,7 +12,7 @@
 class Art_electricos: public Articulos {
 protected: 
     
-void Art_electricos();
+ Art_electricos();
 };
 
 #endif //_ART_ELECTRICOS_H

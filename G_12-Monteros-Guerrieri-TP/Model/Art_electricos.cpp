@@ -13,3 +13,11 @@
 void Art_electricos::Art_electricos() {
 
 }
+
+Art_electricos::Art_electricos()
+{
+}
+
+Art_electricos::~Art_electricos()
+{
+}

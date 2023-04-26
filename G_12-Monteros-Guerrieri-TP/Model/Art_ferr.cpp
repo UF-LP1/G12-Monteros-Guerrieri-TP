@@ -13,3 +13,11 @@
 void Art_ferr::Art_ferr() {
 
 }
+
+Art_ferr::Art_ferr()
+{
+}
+
+Art_ferr::~Art_ferr()
+{
+}

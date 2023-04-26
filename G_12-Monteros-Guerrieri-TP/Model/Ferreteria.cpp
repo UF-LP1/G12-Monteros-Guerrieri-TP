@@ -20,6 +20,12 @@ void Ferreteria::set_dia(void string) {
 /**
  * @return string
  */
+Ferreteria::Ferreteria()
+{
+}
+void Ferreteria::set_dia(string)
+{
+}
 string Ferreteria::get_dia() {
     return "";
 }

@@ -7,28 +7,31 @@
 #define _DESPACHANTE_H
 
 #include "Empleado.h"
+#include <string>
 
+using namespace std;
 
 class Despachante: public Empleado {
 public: 
+    Despachante();
     unsigned int alcance_servicio_km;
     
 /**
  * @param string
  */
-void set_vehiculo(void string);
+void set_vehiculo( string);
     
 /**
  * @param unsigned int
  */
-void set_capacidad(void unsigned int);
+void set_capacidad( unsigned int);
     
 string get_vehiculo();
     
 string get_capacidad();
 protected: 
     
-void Despachante();
+ 
 private: 
     string vehiculo;
     unsigned int capacidad_kg;

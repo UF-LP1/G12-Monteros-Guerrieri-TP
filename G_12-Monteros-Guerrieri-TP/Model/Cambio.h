@@ -7,9 +7,12 @@
 #define _CAMBIO_H
 
 class Cambio {
+
+public:
+    Cambio();
 protected: 
     
-void Cambio();
+ 
 private: 
     unsigned int dif_precio;
 };

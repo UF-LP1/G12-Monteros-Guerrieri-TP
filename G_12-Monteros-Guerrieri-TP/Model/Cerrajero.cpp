@@ -10,6 +10,14 @@
  */
 
 
+Cerrajero::Cerrajero()
+{
+}
+
+Cerrajero::~Cerrajero()
+{
+}
+
 /**
  * @return unsigned int
  */

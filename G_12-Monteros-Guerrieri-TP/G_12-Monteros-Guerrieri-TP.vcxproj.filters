@@ -97,9 +97,6 @@
     <ClInclude Include="Model\Empleado.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="Model\Enumeration1.h">
-      <Filter>Archivos de origen</Filter>
-    </ClInclude>
     <ClInclude Include="Model\estado.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>

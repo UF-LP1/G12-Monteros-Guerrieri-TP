@@ -12,7 +12,7 @@
 class Art_ferr: public Articulos {
 protected: 
     
-void Art_ferr();
+ Art_ferr();
 };
 
 #endif //_ART_FERR_H

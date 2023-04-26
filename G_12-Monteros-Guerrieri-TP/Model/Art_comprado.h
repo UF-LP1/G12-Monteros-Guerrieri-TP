@@ -5,27 +5,31 @@
 
 #ifndef _ART_COMPRADO_H
 #define _ART_COMPRADO_H
+ 
+#include<time.h>
+#include <string>
+using namespace std;
 
 class Art_comprado {
+   time_t  fecha_compra;
 public: 
-    void fecha_compra;
+    
+    Art_comprado();
+/**
+ * @param string
+ */
+void set_comprador( string);
     
 /**
  * @param string
  */
-void set_comprador(void string);
+void set_dir_comprador( string);
     
-/**
- * @param string
- */
-void set_dir_comprador(void string);
-    
-sring get_comprador();
+string get_comprador();
     
 void get_dir_comprador();
-protected: 
     
-void Art_comprado();
+
 };
 
 #endif //_ART_COMPRADO_H

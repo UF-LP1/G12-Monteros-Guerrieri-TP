@@ -10,6 +10,14 @@
  */
 
 
+Duenyo::Duenyo()
+{
+}
+
+Duenyo::~Duenyo()
+{
+}
+
 void Duenyo::Cobrar() {
 
 }

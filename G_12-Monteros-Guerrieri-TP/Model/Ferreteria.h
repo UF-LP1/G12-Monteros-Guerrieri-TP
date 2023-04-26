@@ -3,16 +3,17 @@
  */
 
 
+#include <string>
 #ifndef _FERRETERIA_H
 #define _FERRETERIA_H
-
+using namespace std;
 class Ferreteria {
 public: 
     
 /**
  * @param string
  */
-void set_dia(void string);
+void set_dia( string);
     
 string get_dia();
 protected: 
