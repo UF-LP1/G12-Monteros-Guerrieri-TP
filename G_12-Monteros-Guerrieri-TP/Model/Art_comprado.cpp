@@ -47,6 +47,11 @@ void Art_comprado::get_dir_comprador() {
 
 }
 
+unsigned int Art_comprado::generarPresupuesto(vector<Articulos> lista_compra, string dir_cliente)
+{
+    return 0;
+}
+
 void Art_comprado::Art_comprado() {
 
 }
