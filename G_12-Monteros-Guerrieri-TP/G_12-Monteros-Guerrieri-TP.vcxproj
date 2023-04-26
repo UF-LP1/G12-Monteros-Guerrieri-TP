@@ -17,7 +17,6 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -53,27 +52,24 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared" >
+  <ImportGroup Label="Shared">
   </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -130,8 +126,29 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\alq_herramientas.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Articulos.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_Bazar.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_comprado.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_electricos.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_ferr.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Cambio.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Cerrajero.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\cliente.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Despachante.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Duenyo.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Empleado.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Enumeration1.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\estado.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Ferreteria.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Herramientas.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Interface1.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\pago.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Plomero.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Servicio.h" />
+    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\TURNOS.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
