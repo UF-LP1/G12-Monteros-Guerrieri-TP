@@ -18,6 +18,47 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Model\alq_herramientas.cpp" />
+    <ClCompile Include="Model\Articulos.cpp" />
+    <ClCompile Include="Model\Art_Bazar.cpp" />
+    <ClCompile Include="Model\Art_comprado.cpp" />
+    <ClCompile Include="Model\Art_electricos.cpp" />
+    <ClCompile Include="Model\Art_ferr.cpp" />
+    <ClCompile Include="Model\Cambio.cpp" />
+    <ClCompile Include="Model\Cerrajero.cpp" />
+    <ClCompile Include="Model\cliente.cpp" />
+    <ClCompile Include="Model\Despachante.cpp" />
+    <ClCompile Include="Model\Duenyo.cpp" />
+    <ClCompile Include="Model\Empleado.cpp" />
+    <ClCompile Include="Model\Ferreteria.cpp" />
+    <ClCompile Include="Model\Herramientas.cpp" />
+    <ClCompile Include="Model\Plomero.cpp" />
+    <ClCompile Include="Model\Servicio.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Model\alq_herramientas.h" />
+    <ClInclude Include="Model\Articulos.h" />
+    <ClInclude Include="Model\Art_Bazar.h" />
+    <ClInclude Include="Model\Art_comprado.h" />
+    <ClInclude Include="Model\Art_electricos.h" />
+    <ClInclude Include="Model\Art_ferr.h" />
+    <ClInclude Include="Model\Cambio.h" />
+    <ClInclude Include="Model\Cerrajero.h" />
+    <ClInclude Include="Model\cliente.h" />
+    <ClInclude Include="Model\Despachante.h" />
+    <ClInclude Include="Model\Duenyo.h" />
+    <ClInclude Include="Model\Empleado.h" />
+    <ClInclude Include="Model\Enumeration1.h" />
+    <ClInclude Include="Model\estado.h" />
+    <ClInclude Include="Model\Ferreteria.h" />
+    <ClInclude Include="Model\Herramientas.h" />
+    <ClInclude Include="Model\Interface1.h" />
+    <ClInclude Include="Model\pago.h" />
+    <ClInclude Include="Model\Plomero.h" />
+    <ClInclude Include="Model\Servicio.h" />
+    <ClInclude Include="Model\TURNOS.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,29 +167,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\alq_herramientas.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Articulos.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_Bazar.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_comprado.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_electricos.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_ferr.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Cambio.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Cerrajero.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\cliente.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Despachante.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Duenyo.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Empleado.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Enumeration1.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\estado.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Ferreteria.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Herramientas.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Interface1.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\pago.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Plomero.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Servicio.h" />
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\TURNOS.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

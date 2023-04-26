@@ -5,78 +5,124 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Archivos de recursos">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\alq_herramientas.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClCompile Include="Model\alq_herramientas.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Art_Bazar.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Art_comprado.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Art_electricos.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Art_ferr.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Articulos.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Cambio.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Cerrajero.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\cliente.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Despachante.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Duenyo.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Empleado.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Ferreteria.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Herramientas.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Plomero.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Servicio.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Model\alq_herramientas.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_Bazar.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Art_Bazar.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_comprado.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Art_comprado.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_electricos.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Art_electricos.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Art_ferr.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Art_ferr.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Articulos.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Articulos.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Cambio.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Cambio.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Cerrajero.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Cerrajero.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\cliente.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\cliente.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Despachante.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Despachante.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Duenyo.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Duenyo.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Empleado.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Empleado.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Enumeration1.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Enumeration1.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\estado.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\estado.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Ferreteria.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Ferreteria.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Herramientas.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Herramientas.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Interface1.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Interface1.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\pago.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\pago.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Plomero.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Plomero.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\Servicio.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\Servicio.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\G_Monteros_Guerrieri_TP\G_12_Guerrieri_Monteros_TP\G_12_Monteros_Guerrieri_ TP\Archivos de encabezado\TURNOS.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Model\TURNOS.h">
+      <Filter>Archivos de origen</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
