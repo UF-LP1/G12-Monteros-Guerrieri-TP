@@ -9,71 +9,50 @@
  * alq_herramientas implementation
  */
 
-
-/**
- * @param unsigned int
- */
-void alq_herramientas::set_dias(void unsigned int) {
-
-}
-
-/**
- * @return unsigned int
- */
 alq_herramientas::alq_herramientas()
 {
+    this->Disponible = true;
+    this->precio_por_dia = 100;
+    this->dias = 0;
+    this->seguro = 100;
 }
 alq_herramientas::~alq_herramientas()
 {
 }
-void alq_herramientas::set_dias(unsigned int)
-{
+
+/**
+ * @param unsigned int
+ */
+void alq_herramientas::set_dias(unsigned int) {
+
 }
+
+
 unsigned int alq_herramientas::get_dias() {
-    return null;
+    return NULL;
 }
 
 /**
  * @param unsigned int
  */
-void alq_herramientas::set_seguro(void unsigned int) {
+void alq_herramientas::set_seguro( unsigned int) {
 
 }
 
-/**
- * @return unsigned int
- */
-void alq_herramientas::set_seguro(unsigned int)
-{
-}
 unsigned int alq_herramientas::get_seguro() {
-    return null;
+    return NULL;
 }
 
 void alq_herramientas::set_dir_alquilante(string)
 {
 }
 
-/**
- * @param string
- */
-void alq_herramientas::set_dir_alquilante(void string) {
 
-}
 
-/**
- * @param string
- */
-void alq_herramientas::set_alquilante(void string) {
-
-}
-
-/**
- * @return string
- */
 void alq_herramientas::set_alquilante(string)
 {
 }
+
 string alq_herramientas::get_alquilante() {
     return "";
 }
@@ -82,7 +61,7 @@ string alq_herramientas::get_alquilante() {
  * @return unsigned int
  */
 unsigned int alq_herramientas::get_dir_alquilante() {
-    return null;
+    return NULL;
 }
 
 void alq_herramientas::Alquilados() {

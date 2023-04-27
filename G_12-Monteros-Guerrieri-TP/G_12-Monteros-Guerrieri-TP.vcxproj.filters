@@ -59,6 +59,7 @@
     <ClCompile Include="Model\Servicio.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\alq_herramientas.h">

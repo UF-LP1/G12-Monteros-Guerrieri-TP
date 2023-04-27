@@ -12,7 +12,7 @@ using namespace std;
 class Articulos {
 public: 
     
-    Articulos();
+    Articulos(string nnombre, unsigned int nprecio, unsigned int ncantidad);
     ~Articulos();
 
 const string get_nombre_art();
@@ -31,7 +31,7 @@ void set_precio( unsigned int nprecio);
  */
 void set_stock( unsigned int cantidad_restada);
 
-unsigned int generarPresupuesto(list<Articulos> lista_compra);
+
 
 protected: 
     const string Nombre_art;

@@ -12,6 +12,7 @@
 
 Empleado::Empleado()
 {
+    this->disponible = true;
 }
 
 Empleado::~Empleado()
@@ -25,20 +26,10 @@ void Empleado::get_servicio() {
 /**
  * @param bool
  */
-void Empleado::set_disponibilidad(void bool) {
+void Empleado::set_disponibilidad(bool) {
 
 }
 
-/**
- * @return bool
- */
-void Empleado::set_disponibilidad(bool)
-{
-}
 bool Empleado::get_disponibilidad() {
     return false;
-}
-
-void Empleado::Empleado() {
-
 }

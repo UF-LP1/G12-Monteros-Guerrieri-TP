@@ -27,7 +27,7 @@ void Art_comprado::set_dir_comprador(string)
 }
 string Art_comprado::get_comprador() {
 
-    return 0;
+    return "";
 }
 
 void Art_comprado::get_dir_comprador() {

@@ -9,11 +9,6 @@
  * Art_ferr implementation
  */
 
-
-void Art_ferr::Art_ferr() {
-
-}
-
 Art_ferr::Art_ferr()
 {
 }

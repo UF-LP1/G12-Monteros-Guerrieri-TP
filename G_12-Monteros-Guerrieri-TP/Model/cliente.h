@@ -4,6 +4,8 @@
 
 
 #include <string>
+#include <list>
+#include "Articulos.h"
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
 using namespace std;
@@ -11,7 +13,7 @@ using namespace std;
 class cliente {
 public: 
     
-    cliente();
+    cliente(string nombre);
     ~cliente();
 
 unsigned int get_tarjeta();
@@ -37,10 +39,17 @@ void comprar_articulos( unsigned int stock,  unsigned int precio);
 void alquilar_herramientas();
     
 void contratar_servicio();
+
+void agregar_art(Articulos* agregado);
     
+string get_Nombre();
+
+list<Articulos> get_lista_compra();
 void devolver_art();
+
 protected: 
     
+
 
 private: 
     const string Nombre_cliente;
@@ -51,6 +60,7 @@ private:
     string direccion_cliente;
     unsigned int numero_cliente;
     const string mail;
+    list<Articulos> lista_compra;
 };
 
 #endif //_CLIENTE_H

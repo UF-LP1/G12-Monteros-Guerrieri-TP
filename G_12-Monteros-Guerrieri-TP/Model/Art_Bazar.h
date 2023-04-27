@@ -9,7 +9,7 @@
 #include "Articulos.h"
 
 
-class Art_Bazar: public Articulos {
+class Art_Bazar {
 
 protected: 
     

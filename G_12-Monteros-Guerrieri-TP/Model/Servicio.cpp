@@ -14,11 +14,7 @@
  * @param string
  * @param bool
  */
-void Servicio::servicio(void string, void bool) {
-
-}
-
-void Servicio::servicio() {
+void Servicio::servicio( string,  bool) {
 
 }
 
@@ -27,9 +23,5 @@ Servicio::Servicio()
 }
 
 Servicio::~Servicio()
-{
-}
-
-void Servicio::servicio(string, bool)
 {
 }

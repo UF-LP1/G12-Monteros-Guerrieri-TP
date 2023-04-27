@@ -9,8 +9,9 @@
  * Cambio implementation
  */
 
-Cambio::Cambio()
+Cambio::Cambio(unsigned int)
 {
+	this->dif_precio = 0;
 }
 
 Cambio::~Cambio()

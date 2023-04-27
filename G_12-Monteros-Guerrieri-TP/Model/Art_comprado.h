@@ -12,7 +12,6 @@
 using namespace std;
 
 class Art_comprado {
-    time_t  fecha_compra;
 
 public:
 

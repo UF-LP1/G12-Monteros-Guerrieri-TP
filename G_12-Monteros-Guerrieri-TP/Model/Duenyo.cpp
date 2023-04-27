@@ -10,7 +10,7 @@
  */
 
 
-Duenyo::Duenyo()
+Duenyo::Duenyo(string)
 {
 }
 
@@ -30,6 +30,32 @@ void Duenyo::Atender_clientes() {
 
 }
 
-void Duenyo::Duenyo() {
+unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)
+{
+    unsigned int Presupuesto_total = 0;
+    list<Articulos>::iterator aux = lista_compra.begin();
 
+    int i = 0;
+    while (aux != lista_compra.end()) {
+
+        Presupuesto_total += aux->get_precio() * aux->get_stock();
+
+        aux++;
+    }
+    return Presupuesto_total;
+}
+
+void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total)
+{
+    list<Articulos>::iterator factura = vendidos.begin();
+    int i = 0;
+
+    while (factura != vendidos.end())
+    {
+        cout << "factura" << endl << "objeto-------------" << factura->get_nombre_art() << endl << "cantidad-------------" << factura->get_stock() << endl << "precio unidad-------------" << factura->get_precio() << endl;
+
+        factura++;
+
+    }
+    cout << "precio total               " << total << endl << endl;
 }

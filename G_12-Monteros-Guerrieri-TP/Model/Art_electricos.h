@@ -9,7 +9,7 @@
 #include "Articulos.h"
 
 
-class Art_electricos: public Articulos {
+class Art_electricos{
 
 public:
  Art_electricos();

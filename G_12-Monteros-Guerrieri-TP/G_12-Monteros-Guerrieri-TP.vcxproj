@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model\alq_herramientas.cpp" />
     <ClCompile Include="Model\Articulos.cpp" />
     <ClCompile Include="Model\Art_Bazar.cpp" />
