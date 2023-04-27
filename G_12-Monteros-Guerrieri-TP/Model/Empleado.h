@@ -11,6 +11,7 @@ using namespace std;
 class Empleado {
 public: 
     Empleado();
+    ~Empleado();
     
 void get_servicio();
     

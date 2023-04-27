@@ -23,6 +23,9 @@ void Ferreteria::set_dia(void string) {
 Ferreteria::Ferreteria()
 {
 }
+Ferreteria::~Ferreteria()
+{
+}
 void Ferreteria::set_dia(string)
 {
 }

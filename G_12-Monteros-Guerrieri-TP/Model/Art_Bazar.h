@@ -15,6 +15,8 @@ protected:
     
 public:
     Art_Bazar();
+    ~Art_Bazar();
+
 
 };
 

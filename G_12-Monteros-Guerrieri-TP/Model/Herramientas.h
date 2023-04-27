@@ -13,6 +13,7 @@ class Herramientas: public Art_ferr {
 public: 
     
     Herramientas();
+    ~Herramientas();
 
 /**
  * @param string

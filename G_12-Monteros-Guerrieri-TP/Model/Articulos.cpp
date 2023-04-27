@@ -20,37 +20,50 @@ Articulos::~Articulos()
 {
 }
 const string Articulos::get_nombre_art() {
-    return null;
+
+    return this->Nombre_art;
 }
 
 /**
  * @return unsigned int
  */
 unsigned int Articulos::get_precio() {
-    return null;
+    return this->Precio;
 }
 
 /**
  * @return unsigned int
  */
 unsigned int Articulos::get_stock() {
-    return null;
+    return this->cantidad;
 }
 
 /**
  * @param unsigned int
  */
-void Articulos::set_precio(void unsigned int) {
-
+void Articulos::set_precio( unsigned int nprecio) {
+    this->Precio = nprecio;
 }
 
 /**
  * @param unsigned int
  */
-void Articulos::set_stock(void unsigned int) {
+void Articulos::set_stock( unsigned int cantidad_restada) {
 
+    this->cantidad = this->cantidad - cantidad_restada;
 }
 
-void Articulos::Articulos() {
 
+unsigned int Articulos::generarPresupuesto(list<Articulos> lista_compra)
+{
+    unsigned int Presupuesto_total;
+    list<Articulos>::iterator aux=lista_compra.begin();
+    int i = 0; 
+    while (aux != lista_compra.end()) {
+        
+        Presupuesto_total = aux->get_precio() * aux->cantidad;
+       
+        aux++;
+    }
+    return Presupuesto_total;
 }

@@ -12,6 +12,7 @@ using namespace std;
 class Duenyo {
 public: 
     Duenyo();
+    ~Duenyo();
 
 void Cobrar();
     

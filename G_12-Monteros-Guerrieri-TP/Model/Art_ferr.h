@@ -10,9 +10,12 @@
 
 
 class Art_ferr: public Articulos {
+public:
+    Art_ferr();
+    ~Art_ferr();
 protected: 
     
- Art_ferr();
+ 
 };
 
 #endif //_ART_FERR_H

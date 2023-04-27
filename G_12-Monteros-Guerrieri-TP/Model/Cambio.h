@@ -10,6 +10,7 @@ class Cambio {
 
 public:
     Cambio();
+    ~Cambio();
 protected: 
     
  

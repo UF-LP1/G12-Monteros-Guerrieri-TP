@@ -13,6 +13,7 @@ class Cerrajero: public Empleado {
 public: 
 
     Cerrajero();
+    ~Cerrajero();
 
     unsigned int alcance_servicio_km;
     

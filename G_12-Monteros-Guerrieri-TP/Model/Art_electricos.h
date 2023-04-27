@@ -10,9 +10,12 @@
 
 
 class Art_electricos: public Articulos {
-protected: 
-    
+
+public:
  Art_electricos();
+ ~Art_electricos();
+protected:
+
 };
 
 #endif //_ART_ELECTRICOS_H

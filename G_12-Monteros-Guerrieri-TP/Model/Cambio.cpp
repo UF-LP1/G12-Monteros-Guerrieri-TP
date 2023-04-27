@@ -9,11 +9,6 @@
  * Cambio implementation
  */
 
-
-void Cambio::Cambio() {
-
-}
-
 Cambio::Cambio()
 {
 }

@@ -14,6 +14,8 @@ using namespace std;
 class Despachante: public Empleado {
 public: 
     Despachante();
+    ~Despachante();
+
     unsigned int alcance_servicio_km;
     
 /**

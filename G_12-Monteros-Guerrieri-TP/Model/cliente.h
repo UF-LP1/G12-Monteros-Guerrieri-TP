@@ -12,6 +12,7 @@ class cliente {
 public: 
     
     cliente();
+    ~cliente();
 
 unsigned int get_tarjeta();
     
