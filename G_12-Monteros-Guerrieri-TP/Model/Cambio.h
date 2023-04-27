@@ -9,7 +9,7 @@
 class Cambio {
 
 public:
-    Cambio();
+    Cambio(unsigned int);
     ~Cambio();
 protected: 
     

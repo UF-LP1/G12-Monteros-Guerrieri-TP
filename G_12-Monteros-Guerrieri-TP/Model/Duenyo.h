@@ -26,6 +26,8 @@ void Atender_clientes();
 
 unsigned int generarPresupuesto(list<Articulos> lista_compra);
 
+void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total);
+
 protected: 
     
 

@@ -13,7 +13,7 @@
 /**
  * @return unsigned int
  */
-cliente::cliente(string)
+cliente::cliente(string nombre_c): Nombre_cliente(nombre_c)
 {
 
 }
@@ -21,14 +21,14 @@ cliente::~cliente()
 {
 }
 unsigned int cliente::get_tarjeta() {
-    return null;
+    return NULL;
 }
 
 /**
  * @return unsigned int
  */
 unsigned int cliente::get_DNI() {
-    return null;
+    return NULL;
 }
 
 /**
@@ -56,7 +56,7 @@ bool cliente::get_permiso_mag() {
  * @return unsigned int
  */
 unsigned int cliente::get_numero_cliente() {
-    return null;
+    return NULL;
 }
 
 /**
@@ -70,12 +70,8 @@ string cliente::set_producto_deseado() {
  * @param unsigned int stock
  * @param unsigned int precio
  */
-void cliente::comprar_articulos(void unsigned int stock, void unsigned int precio) {
+void cliente::comprar_articulos(unsigned int stock, unsigned int precio) {
 
-}
-
-void cliente::comprar_articulos(unsigned int stock, unsigned int precio)
-{
 }
 
 void cliente::alquilar_herramientas() {
@@ -86,10 +82,22 @@ void cliente::contratar_servicio() {
 
 }
 
-void cliente::devolver_art() {
+void cliente::agregar_art(Articulos* agregado)
+{
+    this->lista_compra.push_back(*agregado);
 
 }
 
-void cliente::cliente() {
+string cliente::get_Nombre()
+{
+    return this->Nombre_cliente;
+}
+
+list<Articulos> cliente::get_lista_compra()
+{
+    return this->lista_compra;
+}
+
+void cliente::devolver_art() {
 
 }

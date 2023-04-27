@@ -13,7 +13,6 @@ public:
     Servicio();
     ~Servicio();
     string Nombre_servicio;
-    bool disponible;
     
 /**
  * @param string
