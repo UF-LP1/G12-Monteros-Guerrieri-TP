@@ -9,7 +9,7 @@
 #include "Articulos.h"
 
 
-class Art_ferr: public Articulos {
+class Art_ferr {
 public:
     Art_ferr();
     ~Art_ferr();

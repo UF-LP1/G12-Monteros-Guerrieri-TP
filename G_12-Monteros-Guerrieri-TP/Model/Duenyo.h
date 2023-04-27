@@ -6,6 +6,7 @@
 #include <string>
 #include "Articulos.h"
 #include "cliente.h"
+#include <list>
 #include <iostream>
 
 #ifndef _DUENYO_H

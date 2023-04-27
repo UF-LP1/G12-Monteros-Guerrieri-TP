@@ -12,6 +12,7 @@
 
 Empleado::Empleado()
 {
+    this->disponible = true;
 }
 
 Empleado::~Empleado()
