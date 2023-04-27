@@ -13,8 +13,10 @@
 /**
  * @return const string
  */
-Articulos::Articulos()
+Articulos::Articulos(string nnombre, unsigned int nprecio, unsigned int ncantidad): Nombre_art(nnombre)
 {
+    this->cantidad = ncantidad;
+    this->Precio = nprecio;
 }
 Articulos::~Articulos()
 {
@@ -54,16 +56,3 @@ void Articulos::set_stock( unsigned int cantidad_restada) {
 }
 
 
-unsigned int Articulos::generarPresupuesto(list<Articulos> lista_compra)
-{
-    unsigned int Presupuesto_total;
-    list<Articulos>::iterator aux=lista_compra.begin();
-    int i = 0; 
-    while (aux != lista_compra.end()) {
-        
-        Presupuesto_total = aux->get_precio() * aux->cantidad;
-       
-        aux++;
-    }
-    return Presupuesto_total;
-}

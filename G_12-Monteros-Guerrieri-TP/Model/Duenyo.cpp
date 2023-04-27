@@ -10,7 +10,7 @@
  */
 
 
-Duenyo::Duenyo()
+Duenyo::Duenyo(string)
 {
 }
 
@@ -30,6 +30,16 @@ void Duenyo::Atender_clientes() {
 
 }
 
-void Duenyo::Duenyo() {
+unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)
+{
+    unsigned int Presupuesto_total = 0;
+    list<Articulos>::iterator aux = lista_compra.begin();
+    int i = 0;
+    while (aux != lista_compra.end()) {
 
+        Presupuesto_total += aux->get_precio() * aux->get_stock();
+
+        aux++;
+    }
+    return Presupuesto_total;
 }

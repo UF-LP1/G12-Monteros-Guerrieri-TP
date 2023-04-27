@@ -13,8 +13,9 @@
 /**
  * @return unsigned int
  */
-cliente::cliente()
+cliente::cliente(string)
 {
+
 }
 cliente::~cliente()
 {
