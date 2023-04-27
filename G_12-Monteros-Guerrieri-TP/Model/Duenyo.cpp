@@ -45,11 +45,10 @@ unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)
     return Presupuesto_total;
 }
 
-
-void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total)
+void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total)
 {
     list<Articulos>::iterator factura = vendidos.begin();
-    int i=0;
+    int i = 0;
 
     while (i <= vendidos.size())
     {
@@ -58,5 +57,5 @@ void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned 
         factura++;
         i++;
     }
-    cout << "precio total               " << total << endl<<endl;
+    cout << "precio total               " << total << endl << endl;
 }
