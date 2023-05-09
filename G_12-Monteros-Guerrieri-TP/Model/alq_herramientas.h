@@ -14,36 +14,25 @@ public:
     
     alq_herramientas();
     ~alq_herramientas();
-/**
- * @param unsigned int
- */
-void set_dias( unsigned int);
+
+
+void set_dias( unsigned int sdias);
     
 unsigned int get_dias();
     
-/**
- * @param unsigned int
- */
-void set_seguro( unsigned int);
+void set_seguro( unsigned int sseguro);
     
 unsigned int get_seguro();
     
-/**
- * @param string
- */
-void set_dir_alquilante(string);
-    
-/**
- * @param string
- */
-void set_alquilante(string);
+void set_dir_alquilante(string sdire);
+
+void set_alquilante(string alquilante);
     
 string get_alquilante();
     
-unsigned int get_dir_alquilante();
+string get_dir_alquilante();
 protected: 
-    
-void Alquilados();
+   
 private: 
     const string nombre_herra;
     unsigned int dias;

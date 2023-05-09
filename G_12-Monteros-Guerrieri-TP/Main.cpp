@@ -26,5 +26,7 @@ int main()
 	presupuesto_total= El_jefe.generarPresupuesto(ejemplo.get_lista_compra());
 
 	El_jefe.Imprimir_factura(ejemplo.get_lista_compra(),ejemplo.get_Nombre(),presupuesto_total);
+
+	ejemplo.liberar_memoria();
 	return 0;
 }

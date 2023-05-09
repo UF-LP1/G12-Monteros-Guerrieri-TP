@@ -21,19 +21,11 @@ unsigned int get_tarjeta();
 unsigned int get_DNI();
     
 string get_direccion();
-    
-string get_producto_deseado();
-    
+
 bool get_permiso_mag();
     
 unsigned int get_numero_cliente();
     
-string set_producto_deseado();
-    
-/**
- * @param unsigned int stock
- * @param unsigned int precio
- */
 void comprar_articulos( unsigned int stock,  unsigned int precio);
     
 void alquilar_herramientas();
@@ -41,6 +33,10 @@ void alquilar_herramientas();
 void contratar_servicio();
 
 void agregar_art(Articulos* agregado);
+
+unsigned int get_cant_articulos();
+
+void liberar_memoria();
     
 string get_Nombre();
 
@@ -55,7 +51,6 @@ private:
     const string Nombre_cliente;
     unsigned int Numero_de_tarjeta;
     unsigned int DNI;
-    string Producto_deseado;
     bool Permiso_magnetica;
     string direccion_cliente;
     unsigned int numero_cliente;

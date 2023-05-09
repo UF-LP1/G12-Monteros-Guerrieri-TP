@@ -21,55 +21,30 @@ cliente::~cliente()
 {
 }
 unsigned int cliente::get_tarjeta() {
-    return NULL;
+    return this->Numero_de_tarjeta;
 }
 
-/**
- * @return unsigned int
- */
+
 unsigned int cliente::get_DNI() {
-    return NULL;
+    return this->DNI;
 }
 
-/**
- * @return string
- */
+
 string cliente::get_direccion() {
-    return "";
+    return this->direccion_cliente;
 }
 
-/**
- * @return string
- */
-string cliente::get_producto_deseado() {
-    return "";
-}
-
-/**
- * @return bool
- */
 bool cliente::get_permiso_mag() {
-    return false;
+    return this->Permiso_magnetica;
 }
 
 /**
  * @return unsigned int
  */
 unsigned int cliente::get_numero_cliente() {
-    return NULL;
+    return this->numero_cliente;
 }
 
-/**
- * @return string
- */
-string cliente::set_producto_deseado() {
-    return "";
-}
-
-/**
- * @param unsigned int stock
- * @param unsigned int precio
- */
 void cliente::comprar_articulos(unsigned int stock, unsigned int precio) {
 
 }
@@ -86,6 +61,17 @@ void cliente::agregar_art(Articulos* agregado)
 {
     this->lista_compra.push_back(*agregado);
 
+}
+
+unsigned int cliente::get_cant_articulos()
+{
+    return this->lista_compra.size();
+}
+
+void cliente::liberar_memoria()
+{
+
+    delete[]&lista_compra;
 }
 
 string cliente::get_Nombre()
