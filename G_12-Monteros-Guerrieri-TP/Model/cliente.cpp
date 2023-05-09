@@ -5,17 +5,10 @@
 
 #include "cliente.h"
 
-/**
- * cliente implementation
- */
-
-
-/**
- * @return unsigned int
- */
-cliente::cliente(string nombre_c): Nombre_cliente(nombre_c)
+cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta): Nombre_cliente(nombre_c), DNI(cDNI), Numero_de_tarjeta(cnum_tarjeta)
 {
-
+    this->numero_cliente = 0;
+    this->Permiso_magnetica = false;
 }
 cliente::~cliente()
 {
@@ -34,15 +27,27 @@ string cliente::get_direccion() {
     return this->direccion_cliente;
 }
 
+void cliente::set_direccion(string sdir)
+{
+    this->direccion_cliente = sdir;
+}
+
 bool cliente::get_permiso_mag() {
     return this->Permiso_magnetica;
 }
 
-/**
- * @return unsigned int
- */
+void cliente::set_permiso_mag(bool spermit)
+{
+    this->Permiso_magnetica = spermit;
+}
+
 unsigned int cliente::get_numero_cliente() {
     return this->numero_cliente;
+}
+
+void cliente::set_numero_cliente(unsigned int snumero_cliente)
+{
+    this->numero_cliente = snumero_cliente;
 }
 
 void cliente::comprar_articulos(unsigned int stock, unsigned int precio) {

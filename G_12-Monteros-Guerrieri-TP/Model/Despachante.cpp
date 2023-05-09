@@ -5,14 +5,6 @@
 
 #include "Despachante.h"
 
-/**
- * Despachante implementation
- */
-
-
-/**
- * @param unsigned int
- */
 Despachante::Despachante()
 {
 }

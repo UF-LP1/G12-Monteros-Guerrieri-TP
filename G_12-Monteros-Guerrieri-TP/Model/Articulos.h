@@ -21,17 +21,9 @@ unsigned int get_precio();
     
 unsigned int get_stock();
     
-/**
- * @param unsigned int
- */
 void set_precio( unsigned int nprecio);
     
-/**
- * @param unsigned int
- */
 void set_stock( unsigned int cantidad_restada);
-
-
 
 protected: 
     const string Nombre_art;

@@ -13,7 +13,7 @@ using namespace std;
 class cliente {
 public: 
     
-    cliente(string nombre);
+    cliente(string nombre, unsigned int cDNI, unsigned int cnum_tarjeta);
     ~cliente();
 
 unsigned int get_tarjeta();
@@ -22,9 +22,15 @@ unsigned int get_DNI();
     
 string get_direccion();
 
+void set_direccion(string sdir);
+
 bool get_permiso_mag();
+
+void set_permiso_mag(bool spermit);
     
 unsigned int get_numero_cliente();
+
+void set_numero_cliente(unsigned int snumero_cliente);
     
 void comprar_articulos( unsigned int stock,  unsigned int precio);
     
@@ -41,6 +47,7 @@ void liberar_memoria();
 string get_Nombre();
 
 list<Articulos> get_lista_compra();
+
 void devolver_art();
 
 protected: 
@@ -49,8 +56,8 @@ protected:
 
 private: 
     const string Nombre_cliente;
-    unsigned int Numero_de_tarjeta;
-    unsigned int DNI;
+    const unsigned int Numero_de_tarjeta;
+    const unsigned int DNI;
     bool Permiso_magnetica;
     string direccion_cliente;
     unsigned int numero_cliente;

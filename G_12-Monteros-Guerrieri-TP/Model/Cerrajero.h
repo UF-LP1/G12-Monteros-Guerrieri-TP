@@ -15,13 +15,13 @@ public:
     Cerrajero();
     ~Cerrajero();
 
+    void set_alcance(unsigned int sdistancia);
+    
+    unsigned int get_alcance();
+
+private:
+
     unsigned int alcance_servicio_km;
-    
-unsigned int set_alcance();
-    
-unsigned int get_alcance();
-protected: 
-    
 
 };
 

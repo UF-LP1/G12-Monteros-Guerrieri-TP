@@ -16,7 +16,7 @@ int main()
 
 	unsigned int presupuesto_total;
 
-	cliente ejemplo("Juancito");
+	cliente ejemplo("Juancito", 45524255, 51024272011);
 
 	ejemplo.agregar_art(primer_articulo);
 	ejemplo.agregar_art(segundo_articulo);

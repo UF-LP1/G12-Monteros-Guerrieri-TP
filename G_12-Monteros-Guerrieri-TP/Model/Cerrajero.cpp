@@ -1,33 +1,24 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "Cerrajero.h"
 
-/**
- * Cerrajero implementation
- */
-
-
 Cerrajero::Cerrajero()
 {
+    this->alcance_servicio_km = 0;
 }
 
 Cerrajero::~Cerrajero()
 {
 }
 
-/**
- * @return unsigned int
- */
-unsigned int Cerrajero::set_alcance() {
-    return NULL;
+
+
+void Cerrajero::set_alcance(unsigned int sdistancia)
+{
+    this->alcance_servicio_km = sdistancia;
 }
 
-/**
- * @return unsigned int
- */
 unsigned int Cerrajero::get_alcance() {
-    return NULL;
+    return this->alcance_servicio_km;
 }
