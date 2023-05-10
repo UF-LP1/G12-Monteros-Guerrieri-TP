@@ -55,6 +55,11 @@ string alq_herramientas::get_alquilante() {
     return this->alquilante;
 }
 
+unsigned int alq_herramientas::get_precio_por_dia()
+{
+    return this->precio_por_dia;
+}
+
 
 string alq_herramientas::get_dir_alquilante() {
     return this->dir_alquilante;

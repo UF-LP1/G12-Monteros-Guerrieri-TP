@@ -2,10 +2,12 @@
  * Project Untitled
  */
 
-
+#include <cstdlib>
 #include <string>
+#include <time.h>
 #include <list>
 #include "Articulos.h"
+#include "alq_herramientas.h"
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
 using namespace std;
@@ -50,6 +52,8 @@ list<Articulos> get_lista_compra();
 
 void devolver_art();
 
+void alquilar_herramienta(alq_herramientas alquilada);
+
 protected: 
     
 
@@ -63,6 +67,7 @@ private:
     unsigned int numero_cliente;
     const string mail;
     list<Articulos> lista_compra;
+    unsigned int deuda;
 };
 
 #endif //_CLIENTE_H

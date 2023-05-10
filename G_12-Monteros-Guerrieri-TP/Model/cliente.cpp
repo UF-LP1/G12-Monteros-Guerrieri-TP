@@ -92,3 +92,16 @@ list<Articulos> cliente::get_lista_compra()
 void cliente::devolver_art() {
 
 }
+
+void cliente::alquilar_herramienta(alq_herramientas alquilada)
+{
+    srand(time(0));
+
+    int suerte = rand() % 7 + 1;
+
+    if (suerte == 7)
+        this->deuda = +alquilada.get_seguro();
+    else
+        this->deuda = +(alquilada.get_dias() * alquilada.get_precio_por_dia());
+
+}

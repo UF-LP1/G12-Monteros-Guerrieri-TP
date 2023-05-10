@@ -29,6 +29,8 @@ void set_dir_alquilante(string sdire);
 void set_alquilante(string alquilante);
     
 string get_alquilante();
+
+unsigned int get_precio_por_dia();
     
 string get_dir_alquilante();
 protected: 
