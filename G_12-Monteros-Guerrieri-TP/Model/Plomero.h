@@ -13,8 +13,6 @@ class Plomero: public Empleado {
 public: 
     Plomero();
     ~Plomero();
-
-    unsigned int alcance_servicio_km;
 protected: 
     
 

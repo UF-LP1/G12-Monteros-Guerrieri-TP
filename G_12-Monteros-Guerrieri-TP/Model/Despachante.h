@@ -21,16 +21,16 @@ public:
 /**
  * @param string
  */
-void set_vehiculo( string);
+void set_vehiculo( string svehiculo);
     
 /**
  * @param unsigned int
  */
-void set_capacidad( unsigned int);
+void set_capacidad( unsigned int scapacidad);
     
 string get_vehiculo();
     
-string get_capacidad();
+unsigned int get_capacidad();
 protected: 
     
  

@@ -17,6 +17,8 @@ public:
 void set_dia( string);
     
 string get_dia();
+
+unsigned int get_num_ferreteria();
 protected: 
     
 

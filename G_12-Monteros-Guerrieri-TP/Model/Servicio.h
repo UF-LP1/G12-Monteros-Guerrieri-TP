@@ -14,11 +14,6 @@ public:
     ~Servicio();
     string Nombre_servicio;
     
-/**
- * @param string
- * @param bool
- */
-void servicio( string,  bool);
 protected: 
     
 

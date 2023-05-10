@@ -18,9 +18,15 @@ Ferreteria::Ferreteria()
 Ferreteria::~Ferreteria()
 {
 }
-void Ferreteria::set_dia(string)
+void Ferreteria::set_dia(string sdia)
 {
+    this->día = sdia;
 }
 string Ferreteria::get_dia() {
-    return "";
+    return this->día;
+}
+
+unsigned int Ferreteria::get_num_ferreteria()
+{
+    return this->numero_ferreteria;
 }

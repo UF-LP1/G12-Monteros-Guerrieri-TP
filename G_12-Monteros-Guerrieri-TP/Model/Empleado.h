@@ -13,7 +13,7 @@ public:
     Empleado();
     ~Empleado();
     
-void get_servicio();
+string get_servicio();
     
 /**
  * @param bool
@@ -26,7 +26,7 @@ protected:
     string turno;
     bool disponible;
     const string DNI;
-    
+    string servicio;
 
 };
 
