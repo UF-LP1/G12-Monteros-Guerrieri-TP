@@ -12,7 +12,7 @@ using namespace std;
 class alq_herramientas {
 public: 
     
-    alq_herramientas();
+    alq_herramientas(string cnombre, string cmodelo);
     ~alq_herramientas();
 
 

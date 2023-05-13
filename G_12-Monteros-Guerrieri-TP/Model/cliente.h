@@ -8,6 +8,7 @@
 #include <list>
 #include "Articulos.h"
 #include "alq_herramientas.h"
+#include <iostream>
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
 using namespace std;
@@ -42,7 +43,7 @@ void contratar_servicio();
 
 void agregar_art(Articulos* agregado);
 
-unsigned int get_cant_articulos();
+int get_cant_articulos();
 
 void liberar_memoria();
     
@@ -53,6 +54,8 @@ list<Articulos> get_lista_compra();
 void devolver_art();
 
 void alquilar_herramienta(alq_herramientas alquilada);
+
+unsigned int get_deuda();
 
 protected: 
     

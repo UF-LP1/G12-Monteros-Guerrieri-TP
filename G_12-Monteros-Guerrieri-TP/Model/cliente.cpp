@@ -9,6 +9,8 @@ cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta):
 {
     this->numero_cliente = 0;
     this->Permiso_magnetica = false;
+    this->deuda = 0;
+
 }
 cliente::~cliente()
 {
@@ -68,7 +70,7 @@ void cliente::agregar_art(Articulos* agregado)
 
 }
 
-unsigned int cliente::get_cant_articulos()
+ int cliente::get_cant_articulos()
 {
     return this->lista_compra.size();
 }
@@ -97,11 +99,18 @@ void cliente::alquilar_herramienta(alq_herramientas alquilada)
 {
     srand(time(0));
 
-    int suerte = rand() % 7 + 1;
+    int suerte = rand() % 2+1;
 
-    if (suerte == 7)
-        this->deuda = +alquilada.get_seguro();
+    if (suerte == 1) {
+        this->deuda = this->deuda+ alquilada.get_seguro();
+        cout << "la herramienta se rompio" << endl;
+    }
     else
         this->deuda = +(alquilada.get_dias() * alquilada.get_precio_por_dia());
 
+}
+
+unsigned int cliente::get_deuda()
+{
+    return this->deuda;
 }

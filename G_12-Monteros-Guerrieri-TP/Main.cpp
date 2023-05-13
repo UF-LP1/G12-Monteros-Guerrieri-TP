@@ -16,7 +16,7 @@ int main()
 
 	unsigned int presupuesto_total;
 
-	cliente ejemplo("Juancito", 45524255, 51024272011);
+	cliente ejemplo("Juancito", 45524255, 510242720);
 
 	ejemplo.agregar_art(primer_articulo);
 	ejemplo.agregar_art(segundo_articulo);
@@ -27,6 +27,27 @@ int main()
 
 	El_jefe.Imprimir_factura(ejemplo.get_lista_compra(),ejemplo.get_Nombre(),presupuesto_total);
 
+	list<alq_herramientas> lista_alquilables;
+	alq_herramientas primera_her("amoladora", "modelo industrial");
+	alq_herramientas segunda_her("amoladora", "modelo industrial");
+	alq_herramientas tercera_her("amoladora", "modelo industrial");
+	alq_herramientas cuarta_her("amoladora", "modelo industrial");
+	lista_alquilables.push_back(primera_her);
+	lista_alquilables.push_back(segunda_her);
+	lista_alquilables.push_back(tercera_her);
+	lista_alquilables.push_back(cuarta_her);
+
+	list<alq_herramientas>::iterator it = lista_alquilables.begin();\
+
+	for (int i = 0; i < 4; i++)
+	{
+		ejemplo.alquilar_herramienta(*it);
+		cout <<"la deuda es: " << ejemplo.get_deuda() << endl;
+		it++;
+	}
+
+
+	system("pause");
 	ejemplo.liberar_memoria();
 	return 0;
 }

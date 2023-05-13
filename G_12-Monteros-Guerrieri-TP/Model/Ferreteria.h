@@ -9,7 +9,7 @@
 using namespace std;
 class Ferreteria {
 public: 
-    Ferreteria();
+    Ferreteria(string cNombre, string cDireccion, unsigned int cNum);
     ~Ferreteria();
 /**
  * @param string
@@ -19,14 +19,18 @@ void set_dia( string);
 string get_dia();
 
 unsigned int get_num_ferreteria();
+
+string get_Nombre();
+
+string get_Direccion();
 protected: 
     
 
 private: 
-    string día;
+    string dia;
     const string Nombre;
     const string Direccion;
-    unsigned int numero_ferreteria;
+    const unsigned int numero_ferreteria;
 };
 
 #endif //_FERRETERIA_H

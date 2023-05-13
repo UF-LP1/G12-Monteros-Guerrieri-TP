@@ -9,7 +9,7 @@
  * alq_herramientas implementation
  */
 
-alq_herramientas::alq_herramientas()
+alq_herramientas::alq_herramientas(string cnombre, string cmodelo): modelo(cmodelo), nombre_herra(cnombre)
 {
     this->Disponible = true;
     this->precio_por_dia = 100;
