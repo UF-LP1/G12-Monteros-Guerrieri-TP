@@ -116,3 +116,8 @@ unsigned int cliente::get_deuda()
 {
     return this->deuda;
 }
+
+void cliente::incremento_deuda(unsigned int aumento_deuda)
+{
+    this->deuda = (this->deuda + aumento_deuda);
+}

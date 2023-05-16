@@ -4,16 +4,15 @@
 
 
 #include <string>
-#include "duenyo.h"
 #include <queue>
 #include "Articulos.h"
-#include <list>
+#include "cliente.h"
 
 
 #ifndef _FERRETERIA_H
 #define _FERRETERIA_H
 using namespace std;
-static class Ferreteria {
+class Ferreteria {
 
   
 
@@ -25,7 +24,7 @@ protected:
     const unsigned int numero_ferreteria;
     list<Articulos> stock;
     queue<cliente> cola_clientes;
-    friend class Duenyo;
+
 
 public:
     Ferreteria(string cNombre, string cDireccion, unsigned int cNum);
@@ -42,6 +41,10 @@ public:
     string get_Direccion();
 
     cliente get_cliente();
+
+    void despedirse_de_cliente(); //popea al primer cliente (el mas viejo digamos), debe llamarse al terminar de atender al actual cliente
+
+    list<Articulos> get_stock();
 };
 
 #endif //_FERRETERIA_H

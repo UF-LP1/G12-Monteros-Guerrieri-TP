@@ -1,4 +1,3 @@
-#include "Model/Articulos.h"
 #include "Model/Art_comprado.h"
 #include "Model/cliente.h"
 #include "Model/Duenyo.h"

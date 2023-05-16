@@ -45,3 +45,14 @@ cliente Ferreteria::get_cliente()
 {
     return this-> cola_clientes.front();
 }
+
+void Ferreteria::despedirse_de_cliente()
+{
+    this->cola_clientes.pop();
+    cout << "que tenga un buen dia" << endl;
+}
+
+list<Articulos> Ferreteria::get_stock()
+{
+    return this->stock;
+}

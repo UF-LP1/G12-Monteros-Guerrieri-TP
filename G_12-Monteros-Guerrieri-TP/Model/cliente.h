@@ -4,11 +4,11 @@
 
 #include <cstdlib>
 #include <string>
-#include <time.h>
 #include <list>
 #include "Articulos.h"
 #include "alq_herramientas.h"
 #include <iostream>
+
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
 using namespace std;
@@ -54,6 +54,7 @@ bool alquilar_herramienta(alq_herramientas alquilada, unsigned int dias); //en e
 
 unsigned int get_deuda();
 
+void incremento_deuda(unsigned int aumento_deuda);
 protected: 
     
 
