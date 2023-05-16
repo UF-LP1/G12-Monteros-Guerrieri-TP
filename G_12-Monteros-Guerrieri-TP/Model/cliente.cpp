@@ -12,6 +12,7 @@ cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta):
     this->deuda = 0;
 
 }
+
 cliente::~cliente()
 {
 }
@@ -52,14 +53,6 @@ void cliente::set_numero_cliente(unsigned int snumero_cliente)
     this->numero_cliente = snumero_cliente;
 }
 
-void cliente::comprar_articulos(unsigned int stock, unsigned int precio) {
-
-}
-
-void cliente::alquilar_herramientas() {
-
-}
-
 void cliente::contratar_servicio() {
 
 }
@@ -95,19 +88,28 @@ void cliente::devolver_art() {
 
 }
 
-void cliente::alquilar_herramienta(alq_herramientas alquilada)
+bool cliente::alquilar_herramienta(alq_herramientas alquilada, unsigned int dias)
 {
     srand(time(0));
 
-    int suerte = rand() % 2+1;
+    alquilada.set_dias(dias);
+    alquilada.set_alquilante(this->get_Nombre());
+    alquilada.set_dir_alquilante(this->get_direccion());
+    time_t fechactual;
+    alquilada.set_dia_alquiler(time(&fechactual));
 
-    if (suerte == 1) {
+    int suerte = rand() % 7+1;
+
+    if (suerte == 3) {
         this->deuda = this->deuda+ alquilada.get_seguro();
         cout << "la herramienta se rompio" << endl;
+        return true;
     }
     else
-        this->deuda = +(alquilada.get_dias() * alquilada.get_precio_por_dia());
-
+    {
+        this->deuda = this->deuda + (alquilada.get_dias() * alquilada.get_precio_por_dia());
+        return false;
+    }
 }
 
 unsigned int cliente::get_deuda()

@@ -11,10 +11,10 @@
 
 alq_herramientas::alq_herramientas(string cnombre, string cmodelo): modelo(cmodelo), nombre_herra(cnombre)
 {
-    this->Disponible = true;
     this->precio_por_dia = 100;
     this->dias = 0;
     this->seguro = 100;
+    this->dia_alquiler = NULL;
 }
 
 alq_herramientas::~alq_herramientas()
@@ -63,4 +63,9 @@ unsigned int alq_herramientas::get_precio_por_dia()
 
 string alq_herramientas::get_dir_alquilante() {
     return this->dir_alquilante;
+}
+
+void alq_herramientas::set_dia_alquiler(time_t cfecha)
+{
+    this->dia_alquiler = cfecha;
 }

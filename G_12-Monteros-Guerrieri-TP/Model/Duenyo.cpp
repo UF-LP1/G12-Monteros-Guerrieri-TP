@@ -10,7 +10,7 @@
  */
 
 
-Duenyo::Duenyo(string)
+Duenyo::Duenyo(string cNombre): Nombre(cNombre)
 {
 }
 
@@ -18,7 +18,7 @@ Duenyo::~Duenyo()
 {
 }
 
-void Duenyo::Cobrar() {
+void Duenyo::Cobrar_a_Cliente() {
 
 }
 
@@ -26,8 +26,13 @@ void Duenyo::Hacer_inventario() {
 
 }
 
-void Duenyo::Atender_clientes() {
+void Duenyo::Atender_clientes(cliente cliente_actual, int eleccion) {//1=comprar articulos
+                                                                     //2=contratar cerrajero
+    switch (eleccion)                                                //3=contratar plomero
+    {                                                                //4=pedir envio
+    case 1:cliente_actual;
 
+    }
 }
 
 unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)
@@ -59,3 +64,26 @@ void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, u
     }
     cout << "precio total               " << total << endl << endl;
 }
+
+void Duenyo::ofrecer_opciones()
+{
+    cout << "1) Comprar articulos" << endl << "2) Envio a domicilio" << endl << "3) Contratar plomero" << endl << "4) Contratar cerrajero" << endl;
+}
+
+void Duenyo::vender_articulos(cliente cliente_actual)
+{
+    list<Articulos>:: iterator en_venta=cliente_actual
+}
+
+unsigned int Duenyo::Buscar_stock(list<Articulos> Art_en_stock, string buscado)
+{
+    list<Articulos>::iterator indice_busqueda = Art_en_stock.begin();
+
+    while (indice_busqueda != Art_en_stock.end())
+    {
+        if (indice_busqueda->get_nombre_art() == buscado)
+            return indice_busqueda->get_stock();
+    }
+    return ;
+}
+

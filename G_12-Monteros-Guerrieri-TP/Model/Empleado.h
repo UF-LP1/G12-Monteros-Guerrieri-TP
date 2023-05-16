@@ -4,6 +4,7 @@
 
 
 #include <string>
+#include "cliente.h"
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H
 using namespace std;
@@ -15,12 +16,11 @@ public:
     
 string get_servicio();
     
-/**
- * @param bool
- */
 void set_disponibilidad( bool);
     
 bool get_disponibilidad();
+
+virtual void ofrecer_servicio(cliente cliente_actual, );
 protected: 
     const string Nombre;
     string turno;

@@ -2,52 +2,52 @@
 #include "Model/Art_comprado.h"
 #include "Model/cliente.h"
 #include "Model/Duenyo.h"
+#include "Model/Ferreteria.h"
 
 using namespace std;
 
 int main()
 {
-	Duenyo El_jefe("Eduardo");
+	Ferreteria Lo_de_Juan("Lo de juan", "Dorrego 999", 51024272);
+	Duenyo Juan("Juan");
 
-	Articulos *primer_articulo= new Articulos("tarugos", 5, 20);
-	Articulos *segundo_articulo= new Articulos("tornillos", 20, 25);
-	Articulos *tercer_articulo= new Articulos("tuercas", 25, 5);
-	Articulos *cuarto_articulo= new Articulos("mecha fina", 100, 2);
+	
+	bool flag_atencion = true;
+	bool flag_cliente = true;
+	bool compra = true;
+	int eleccion;
+	char seguir_comprando;
+	
 
-	unsigned int presupuesto_total;
+	do {
+		cout << "Bienvenido" << endl;
+		do {
+			cliente cliente_actual = Lo_de_Juan.get_cliente();
+			do {
+				cout << "¿Que se le ofrece?" << endl;
+				Juan.ofrecer_opciones();
+				cin >> eleccion;
 
-	cliente ejemplo("Juancito", 45524255, 510242720);
+				Juan.Atender_clientes(cliente_actual, eleccion);
 
-	ejemplo.agregar_art(primer_articulo);
-	ejemplo.agregar_art(segundo_articulo);
-	ejemplo.agregar_art(tercer_articulo);
-	ejemplo.agregar_art(cuarto_articulo);
+				cout << "¿Se le ofrece algo mas?" << endl<<"Y/N ?"<<endl;
+				cin >> seguir_comprando;
 
-	presupuesto_total= El_jefe.generarPresupuesto(ejemplo.get_lista_compra());
+				if (seguir_comprando == 'N')
+				{
+					compra = false;
+				}
 
-	El_jefe.Imprimir_factura(ejemplo.get_lista_compra(),ejemplo.get_Nombre(),presupuesto_total);
+			} while (compra != false);
 
-	list<alq_herramientas> lista_alquilables;
-	alq_herramientas primera_her("amoladora", "modelo industrial");
-	alq_herramientas segunda_her("amoladora", "modelo industrial");
-	alq_herramientas tercera_her("amoladora", "modelo industrial");
-	alq_herramientas cuarta_her("amoladora", "modelo industrial");
-	lista_alquilables.push_back(primera_her);
-	lista_alquilables.push_back(segunda_her);
-	lista_alquilables.push_back(tercera_her);
-	lista_alquilables.push_back(cuarta_her);
+			Juan.Imprimir_factura();
 
-	list<alq_herramientas>::iterator it = lista_alquilables.begin();\
+			Juan.Cobrar_a_Cliente();
 
-	for (int i = 0; i < 4; i++)
-	{
-		ejemplo.alquilar_herramienta(*it);
-		cout <<"la deuda es: " << ejemplo.get_deuda() << endl;
-		it++;
-	}
+		} while (flag_cliente != false);
+
+	} while (flag_atencion != false);
 
 
-	system("pause");
-	ejemplo.liberar_memoria();
 	return 0;
 }

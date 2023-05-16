@@ -34,18 +34,14 @@ void set_permiso_mag(bool spermit);
 unsigned int get_numero_cliente();
 
 void set_numero_cliente(unsigned int snumero_cliente);
-    
-void comprar_articulos( unsigned int stock,  unsigned int precio);
-    
-void alquilar_herramientas();
-    
+
 void contratar_servicio();
 
-void agregar_art(Articulos* agregado);
+void agregar_art(Articulos* agregado); //agrega un articulo a la lista de compra del cliente, dsp se sacara
 
 int get_cant_articulos();
 
-void liberar_memoria();
+void liberar_memoria(); //transformar esto en el destructor
     
 string get_Nombre();
 
@@ -53,7 +49,8 @@ list<Articulos> get_lista_compra();
 
 void devolver_art();
 
-void alquilar_herramienta(alq_herramientas alquilada);
+bool alquilar_herramienta(alq_herramientas alquilada, unsigned int dias); //en esta funcion se registra el alquiler que solcita un cliente de una herramienta, cambiando los datos de una instancia de la clase herramienta 
+                                                                          //con la posibilidad de que esta se rompa y se deba pagar el seguro o con la posibilidad de que solo se pague el alquiler en si, variando el atributo deuda del cliente en cuestion
 
 unsigned int get_deuda();
 

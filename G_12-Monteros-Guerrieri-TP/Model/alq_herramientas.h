@@ -9,6 +9,7 @@
 #include <string>
 using namespace std;
 
+//cada instancia de esta clase funcionaria como un registro de los alquileres comenzados por cada cliente, las mismas herramientas que pueden ser alquiladas tambien se encontraran en la lista de articulos de ferreteria
 class alq_herramientas {
 public: 
     
@@ -33,17 +34,18 @@ string get_alquilante();
 unsigned int get_precio_por_dia();
     
 string get_dir_alquilante();
-protected: 
-   
+
+void set_dia_alquiler(time_t cfecha);
+
 private: 
     const string nombre_herra;
     unsigned int dias;
     unsigned int seguro;
-    bool Disponible;
     string alquilante;
     string dir_alquilante;
     const string modelo;
     unsigned int precio_por_dia;
+    time_t dia_alquiler;
 };
 
 #endif //_ALQ_HERRAMIENTAS_H

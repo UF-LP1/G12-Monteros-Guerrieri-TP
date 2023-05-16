@@ -40,3 +40,8 @@ string Ferreteria::get_Direccion()
 {
     return this->Direccion;
 }
+
+cliente Ferreteria::get_cliente()
+{
+    return this-> cola_clientes.front();
+}

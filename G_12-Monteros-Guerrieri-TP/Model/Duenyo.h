@@ -16,19 +16,24 @@ using namespace std;
 
 class Duenyo {
 public: 
-    Duenyo(string);
+    Duenyo(string cNombre);
     ~Duenyo();
 
-void Cobrar();
+void Cobrar_a_Cliente();
     
 void Hacer_inventario();
     
-void Atender_clientes();
+void Atender_clientes(cliente cliente_actual, int eleccion);
 
 unsigned int generarPresupuesto(list<Articulos> lista_compra);
 
 void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total);
 
+void ofrecer_opciones();
+
+void vender_articulos(cliente cliente_actual);
+
+unsigned int Buscar_stock(list<Articulos> Art_en_stock, string buscado);
 protected: 
     
 
