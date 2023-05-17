@@ -4,13 +4,15 @@
 
 
 #include "cliente.h"
+enum tipo_de_pago
+{  Mercado_pago=1,tarjeta,efectivo };
 
-cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta): Nombre_cliente(nombre_c), DNI(cDNI), Numero_de_tarjeta(cnum_tarjeta)
+cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta, int cfondos): Nombre_cliente(nombre_c), DNI(cDNI), Numero_de_tarjeta(cnum_tarjeta)
 {
     this->numero_cliente = 0;
     this->Permiso_magnetica = false;
     this->deuda = 0;
-
+    this->fondos = cfondos;
 }
 
 cliente::~cliente()
@@ -121,3 +123,27 @@ void cliente::incremento_deuda(unsigned int aumento_deuda)
 {
     this->deuda = (this->deuda + aumento_deuda);
 }
+
+void cliente::Pagar(unsigned int cantidad_a_pagar, unsigned int metodo)//1.Mercado_pago
+{                                                                      //2.Tarjeta_credito
+    bool ciclo_pago = true;                                            //3.Efectivo
+    while (ciclo_pago)
+    {                                                                  
+        switch (metodo)                                                
+        {
+        case 1:this->fondos = (this->fondos - cantidad_a_pagar * 1.05); //recargo del 5% por pagar con mercado pago
+            ciclo_pago = false;                                                                
+            break;
+        case 2:this->fondos = (this->fondos - cantidad_a_pagar);       //el precio total si pagas con tarjeta
+            ciclo_pago = false;
+            break;
+        case 3: this->fondos = (this->fondos - cantidad_a_pagar * 0.95); //descuento del 5% si pagas con efectivo
+            ciclo_pago = false;
+            break;
+        default:
+            cout << "un segundo, no encuentro mi billetera" << endl;
+            break;
+        }
+    }
+}
+

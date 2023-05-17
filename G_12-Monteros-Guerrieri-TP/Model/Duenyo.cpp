@@ -28,8 +28,8 @@ void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, C
     switch (eleccion)                                               //3=contratar plomero
     {                                                               //4=pedir envio
     case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual); //5=alquilar
-        break;
-    case 2:
+        break;                                                      //6=cambiar producto
+    case 2:Jose.ofrecer_servicio(cliente_actual);
 
     }
 }
@@ -104,7 +104,6 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual)
 
  void Duenyo::Entregar_articulo(cliente& cliente_actual, list<Articulos>& Art_en_stock, unsigned int cant_deseada, string vendido)
  {
-     Articulos encontrado();
      list<Articulos> ::iterator aux_stock = Art_en_stock.begin();
      while (aux_stock != Art_en_stock.end())
      {
@@ -130,5 +129,6 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual)
          }
          aux_stock++;
      }
+  
  }
 

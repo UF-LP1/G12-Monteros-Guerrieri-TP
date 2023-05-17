@@ -7,17 +7,22 @@
 #define _CERRAJERO_H
 
 #include "Empleado.h"
+#include "cliente.h"
+
 
 
 class Cerrajero: public Empleado {
 public: 
 
-    Cerrajero();
+    Cerrajero(unsigned int alcance);
     ~Cerrajero();
 
     void set_alcance(unsigned int sdistancia);
     
     unsigned int get_alcance();
+
+    void ofrecer_servicio(cliente cliente_actual) ;
+
 
 private:
 

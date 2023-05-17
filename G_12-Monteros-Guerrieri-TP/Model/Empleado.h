@@ -26,7 +26,6 @@ bool get_disponibilidad();
 
 virtual void ofrecer_servicio(cliente cliente_actual)=0;
 
-virtual void Cobrar()=0;
 
 protected: 
     const string Nombre;

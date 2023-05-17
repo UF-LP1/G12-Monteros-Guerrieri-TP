@@ -23,9 +23,6 @@ public:
  */
 void set_vehiculo( string svehiculo);
     
-/**
- * @param unsigned int
- */
 void set_capacidad( unsigned int scapacidad);
     
 string get_vehiculo();

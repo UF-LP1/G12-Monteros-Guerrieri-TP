@@ -16,7 +16,7 @@ using namespace std;
 class cliente {
 public: 
     
-    cliente(string nombre, unsigned int cDNI, unsigned int cnum_tarjeta);
+    cliente(string nombre, unsigned int cDNI, unsigned int cnum_tarjeta, int cfondos);
     ~cliente();
 
 unsigned int get_tarjeta();
@@ -55,6 +55,7 @@ bool alquilar_herramienta(alq_herramientas alquilada, unsigned int dias); //en e
 unsigned int get_deuda();
 
 void incremento_deuda(unsigned int aumento_deuda);
+void Pagar(unsigned int cantidad_a_pagar, unsigned int metodo);
 protected: 
     
 
@@ -69,6 +70,7 @@ private:
     const string mail;
     list<Articulos> lista_compra;
     unsigned int deuda;
+    int fondos;
 };
 
 #endif //_CLIENTE_H
