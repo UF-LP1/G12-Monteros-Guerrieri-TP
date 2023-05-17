@@ -17,8 +17,6 @@ class Ferreteria {
   
 
 protected: 
-
-    static string dia;
     const string Nombre;
     const string Direccion;
     const unsigned int numero_ferreteria;
@@ -27,7 +25,7 @@ protected:
 
 
 public:
-    Ferreteria(string cNombre, string cDireccion, unsigned int cNum);
+    Ferreteria(string cNombre, string cDireccion, unsigned int cNum, string cdia);
     ~Ferreteria();
 
     void set_dia(string);
@@ -47,6 +45,9 @@ public:
     list<Articulos> get_stock();
 
     void terminar_dia();
+
+    static string dia;
+
 };
 
 #endif //_FERRETERIA_H

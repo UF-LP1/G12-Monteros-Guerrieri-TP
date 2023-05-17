@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 
-	Ferreteria Lo_de_Juan("Lo de juan", "Dorrego 999", 51024272);
+	Ferreteria Lo_de_Juan("Lo de juan", "Dorrego 999", 51024272, "Lunes");
 	Duenyo Juan("Juan");
 	Cerrajero Jose(20);
 	Plomero Mario;

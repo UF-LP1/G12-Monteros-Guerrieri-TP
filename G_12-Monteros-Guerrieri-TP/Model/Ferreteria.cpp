@@ -12,8 +12,9 @@
 /**
  * @return string
  */
-Ferreteria::Ferreteria(string cNombre, string cDireccion, unsigned int cNum): Nombre(cNombre),Direccion(cDireccion), numero_ferreteria(cNum)
+Ferreteria::Ferreteria(string cNombre, string cDireccion, unsigned int cNum, string cdia) : Nombre(cNombre), Direccion(cDireccion), numero_ferreteria(cNum)
 {
+    this->dia = cdia;
 }
 Ferreteria::~Ferreteria()
 {
@@ -59,18 +60,17 @@ list<Articulos> Ferreteria::get_stock()
 
 void Ferreteria::terminar_dia()
 {
-    if (this->dia == "lunes")
-        this->dia = "Martes";
-    else if (this->dia == "Martes")
-        this->dia = "Miercoles";
-    else if (this->dia == "Miercoles")
-        this->dia = "Jueves";
-    else if (this->dia == "Jueves")
-        this->dia = "Viernes";
-    else if (this->dia == "Viernes")
-        this->dia = "Sabado";
-    else if (this->dia == "Sabado")
-        this->dia = "Domingo";
-    else if (this->dia == "Domingo")
-        this->dia = "Lunes";
+    if (dia == "lunes")
+        dia = "Martes";
+    else if (dia == "Martes")
+        dia = "Miercoles";
+    else if (dia == "Miercoles")
+        dia = "Jueves";
+    else if (dia == "Jueves")
+        dia = "Viernes";
+    else if (dia == "Viernes")
+        dia = (dia == "Sabado");
+    else if (dia == "Domingo")
+        dia = "Lunes";
 }
+string Ferreteria::dia = "Lunes";
