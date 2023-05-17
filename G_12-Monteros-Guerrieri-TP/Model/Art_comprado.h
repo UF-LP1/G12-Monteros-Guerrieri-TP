@@ -2,7 +2,6 @@
  * Project Untitled
  */
 
-#include <vector>
 #include "Articulos.h"
 #ifndef _ART_COMPRADO_H
 #define _ART_COMPRADO_H
@@ -13,25 +12,15 @@ using namespace std;
 
 class Art_comprado {
 
+private:
+    time_t fecha_compra;
+
 public:
 
     Art_comprado();
     ~Art_comprado();
 
-    /**
-     * @param string
-     */
-    void set_comprador(string);
-
-    /**
-     * @param string
-     */
-    void set_dir_comprador(string);
-
-    string get_comprador();
-
-    void get_dir_comprador();
-
+    time_t get_fecha_compra();
 };
 
 #endif //_ART_COMPRADO_H

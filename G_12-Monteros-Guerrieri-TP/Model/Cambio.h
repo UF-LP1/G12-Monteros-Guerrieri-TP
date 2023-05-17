@@ -11,6 +11,7 @@ class Cambio {
 public:
     Cambio(unsigned int);
     ~Cambio();
+    void set_dif_precio(unsigned int sdif);
 protected: 
     
  

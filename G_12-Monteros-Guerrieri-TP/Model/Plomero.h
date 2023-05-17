@@ -14,7 +14,7 @@ public:
     Plomero();
     ~Plomero();
 
-    unsigned int alcance_servicio_km;
+    void ofrecer_servicio(cliente cliente_actual);
 protected: 
     
 

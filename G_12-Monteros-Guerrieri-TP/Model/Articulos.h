@@ -19,19 +19,13 @@ const string get_nombre_art();
     
 unsigned int get_precio();
     
-unsigned int get_stock();
+unsigned int get_cantidad();
     
-/**
- * @param unsigned int
- */
 void set_precio( unsigned int nprecio);
     
-/**
- * @param unsigned int
- */
 void set_stock( unsigned int cantidad_restada);
 
-
+void set_cantidad(unsigned int scantidad);
 
 protected: 
     const string Nombre_art;

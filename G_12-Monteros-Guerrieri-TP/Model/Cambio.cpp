@@ -17,3 +17,8 @@ Cambio::Cambio(unsigned int)
 Cambio::~Cambio()
 {
 }
+
+void Cambio::set_dif_precio(unsigned int sdif)
+{
+	this->dif_precio = sdif;
+}

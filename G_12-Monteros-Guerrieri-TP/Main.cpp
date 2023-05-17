@@ -1,30 +1,63 @@
-#include "Model/Articulos.h"
 #include "Model/Art_comprado.h"
 #include "Model/cliente.h"
 #include "Model/Duenyo.h"
+#include "Model/Ferreteria.h"
 
 using namespace std;
 
 int main()
 {
-	Duenyo El_jefe("Eduardo");
 
-	Articulos *primer_articulo= new Articulos("tarugos", 5, 20);
-	Articulos *segundo_articulo= new Articulos("tornillos", 20, 25);
-	Articulos *tercer_articulo= new Articulos("tuercas", 25, 5);
-	Articulos *cuarto_articulo= new Articulos("mecha fina", 100, 2);
+	Ferreteria Lo_de_Juan("Lo de juan", "Dorrego 999", 51024272, "Lunes");
+	Duenyo Juan("Juan");
+	Cerrajero Jose(20);
+	Plomero Mario;
+	Despachante Luigi("Fiat 600",100,15);
+	list<Articulos> Articulos_vendidos;
 
-	unsigned int presupuesto_total;
+	
+	bool flag_atencion = true;
+	bool flag_cliente = true;
+	bool compra = true;
+	int eleccion;
+	char seguir_comprando;
+	unsigned int total_pagar=0;
 
-	cliente ejemplo("Juancito");
+	do {
+		cout << "Bienvenido" << endl;
+		do {
+			cliente cliente_actual = Lo_de_Juan.get_cliente();
+			do {
+				cout << "¿Que se le ofrece?" << endl;
+				Juan.ofrecer_opciones();
+				cin >> eleccion;
 
-	ejemplo.agregar_art(primer_articulo);
-	ejemplo.agregar_art(segundo_articulo);
-	ejemplo.agregar_art(tercer_articulo);
-	ejemplo.agregar_art(cuarto_articulo);
+				Juan.Atender_clientes(Lo_de_Juan,cliente_actual,Jose,Mario,Luigi, eleccion,Articulos_vendidos);
 
-	presupuesto_total= El_jefe.generarPresupuesto(ejemplo.get_lista_compra());
+				cout << "¿Se le ofrece algo mas?" << endl<<"Y/N ?"<<endl;
+				cin >> seguir_comprando;
 
-	El_jefe.Imprimir_factura(ejemplo.get_lista_compra(),ejemplo.get_Nombre(),presupuesto_total);
+				if (seguir_comprando == 'N')
+				{
+					compra = false;
+				}
+
+			} while (compra != false);
+
+			list<Articulos>::iterator subtotal = Articulos_vendidos.begin();
+			while (subtotal != Articulos_vendidos.end())
+			{
+				total_pagar = +subtotal->get_precio() * subtotal->get_cantidad();
+				subtotal++;
+			}
+			Juan.Imprimir_factura(Articulos_vendidos,cliente_actual.get_Nombre(),total_pagar );
+
+			Juan.Cobrar_a_Cliente();
+
+		} while (flag_cliente != false);
+
+	} while (flag_atencion != false);
+
+
 	return 0;
 }

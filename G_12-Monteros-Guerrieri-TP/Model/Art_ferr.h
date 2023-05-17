@@ -9,9 +9,8 @@
 #include "Articulos.h"
 
 
-class Art_ferr {
+class Art_ferr :public Articulos{
 public:
-    Art_ferr();
     ~Art_ferr();
 protected: 
     

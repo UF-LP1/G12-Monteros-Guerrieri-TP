@@ -9,10 +9,6 @@
  * Art_electricos implementation
  */
 
-Art_electricos::Art_electricos()
-{
-}
-
 Art_electricos::~Art_electricos()
 {
 }

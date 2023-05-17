@@ -13,26 +13,18 @@ using namespace std;
 
 class Despachante: public Empleado {
 public: 
-    Despachante();
+    Despachante(string cvehiculo, unsigned int ccapacidad, unsigned int calcance);
     ~Despachante();
 
-    unsigned int alcance_servicio_km;
+void set_vehiculo( string svehiculo);
     
-/**
- * @param string
- */
-void set_vehiculo( string);
-    
-/**
- * @param unsigned int
- */
-void set_capacidad( unsigned int);
+void set_capacidad( unsigned int scapacidad);
     
 string get_vehiculo();
     
-string get_capacidad();
-protected: 
-    
+unsigned int get_capacidad();
+
+void ofrecer_servicio(cliente cliente_actual);
  
 private: 
     string vehiculo;

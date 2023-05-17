@@ -9,61 +9,63 @@
  * alq_herramientas implementation
  */
 
-alq_herramientas::alq_herramientas()
+alq_herramientas::alq_herramientas(string cnombre, string cmodelo): modelo(cmodelo), nombre_herra(cnombre)
 {
-    this->Disponible = true;
     this->precio_por_dia = 100;
     this->dias = 0;
     this->seguro = 100;
+    this->dia_alquiler = NULL;
 }
+
 alq_herramientas::~alq_herramientas()
 {
 }
 
-/**
- * @param unsigned int
- */
-void alq_herramientas::set_dias(unsigned int) {
-
+void alq_herramientas::set_dias(unsigned int sdias) {
+    this->dias = sdias;
 }
 
 
 unsigned int alq_herramientas::get_dias() {
-    return NULL;
+    return this->dias;
 }
 
-/**
- * @param unsigned int
- */
-void alq_herramientas::set_seguro( unsigned int) {
 
+void alq_herramientas::set_seguro( unsigned int sseguro) {
+    this->seguro = sseguro;
 }
 
 unsigned int alq_herramientas::get_seguro() {
-    return NULL;
+    return this->seguro;
 }
 
-void alq_herramientas::set_dir_alquilante(string)
+void alq_herramientas::set_dir_alquilante(string sdire)
 {
+    this->dir_alquilante = sdire;
 }
 
 
 
-void alq_herramientas::set_alquilante(string)
+void alq_herramientas::set_alquilante(string salquilante)
 {
+    this->alquilante = salquilante;
 }
 
 string alq_herramientas::get_alquilante() {
-    return "";
+    return this->alquilante;
 }
 
-/**
- * @return unsigned int
- */
-unsigned int alq_herramientas::get_dir_alquilante() {
-    return NULL;
+unsigned int alq_herramientas::get_precio_por_dia()
+{
+    return this->precio_por_dia;
 }
 
-void alq_herramientas::Alquilados() {
 
+string alq_herramientas::get_dir_alquilante() {
+    return this->dir_alquilante;
+}
+
+void alq_herramientas::set_dia_alquiler(time_t cfecha)
+{
+    this->dia_alquiler = cfecha;
 }

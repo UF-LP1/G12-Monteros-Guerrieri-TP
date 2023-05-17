@@ -9,12 +9,11 @@
 #include "Articulos.h"
 
 
-class Art_Bazar {
+class Art_Bazar:public Articulos {
 
 protected: 
     
 public:
-    Art_Bazar();
     ~Art_Bazar();
 
 
