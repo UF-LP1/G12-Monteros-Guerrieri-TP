@@ -24,7 +24,9 @@ void Duenyo::Hacer_inventario() {
 
 void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero Mario, Despachante luigi, int eleccion, list<Articulos>& Articulos_vendidos) {
                                                                               //1=comprar articulos
-    unsigned int dias_de_alquiler=0;                                          //2=contratar cerrajero
+    unsigned int dias_de_alquiler=0;     
+    string nombre_herramienta;         
+    string modelo_herramienta;                                                //2=contratar cerrajero
     switch (eleccion)                                                         //3=contratar plomero
     {                                                                         //4=pedir envio
     case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual, Articulos_vendidos);           //5=alquilar
@@ -35,9 +37,20 @@ void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, C
         break;
     case 4:
         break;
-    case 5:cout << "¿por cuantos dias desea alquilar la herramienta?" << endl;
-        cin >> dias_de_alquiler;
-        cliente_actual.alquilar_herramienta();
+    case 5:
+        cout << "¿que herramienta necesita?" << endl;
+        cin >> nombre_herramienta;
+
+        if (Buscar_stock(Lo_de_Juan.get_stock(), nombre_herramienta) > 0) {
+            cout << "¿algun modelo epecifico?" << endl;
+            cin >> modelo_herramienta;
+            cout << "¿por cuantos dias desea alquilar la herramienta?" << endl;
+            cin >> dias_de_alquiler;
+            alq_herramientas herr_alquilada(nombre_herramienta,modelo_herramienta);
+            cliente_actual.alquilar_herramienta(herr_alquilada,dias_de_alquiler);
+        }
+        else
+            cout << "Disculpe, no tenemos esa herramienta" << endl;
         break;
     case 6:
         break;
@@ -86,7 +99,6 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual, li
 {
 
     list<Articulos>::iterator en_venta=stock.begin();
-    list<Articulos> Articulos_vendidos;
 
     while (en_venta != stock.end())
     {
@@ -144,6 +156,20 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual, li
          }
          aux_stock++;
      }
-  
+  //este no necesita chequear si no se encuentra el articulo porque eso es chequeado antes de llamar al metodo
+ }
+
+ Articulos Duenyo::Buscar_herramienta(list<Articulos> Art_en_stock, string buscada)
+ {
+     list<Articulos>::iterator aux = Art_en_stock.begin();
+
+     while (aux != Art_en_stock.end())
+     {
+         if (aux->get_nombre_art() == buscada)
+             return (*aux);
+
+         aux++;
+     }
+     
  }
 

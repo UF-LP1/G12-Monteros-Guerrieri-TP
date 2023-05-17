@@ -9,10 +9,9 @@
 #include "Articulos.h"
 
 
-class Art_electricos{
+class Art_electricos:public Articulos{
 
 public:
- Art_electricos();
  ~Art_electricos();
 protected:
 

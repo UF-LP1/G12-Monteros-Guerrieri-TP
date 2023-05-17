@@ -19,18 +19,12 @@ public:
  * @param string
  */
 void set_modelo( string);
-void set_Nombre(string snombre);
 string get_modelo();
-string get_nombre();
-void set_precio(unsigned int sprecio);
-unsigned int get_precio();
 protected: 
     
 
 private: 
-    string Nombre;
     string Modelo;
-    unsigned int precio;
 };
 
 #endif //_HERRAMIENTAS_H

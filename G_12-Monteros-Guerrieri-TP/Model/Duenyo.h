@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Ferreteria.h"
 #include "Empleado.h"
+#include"alq_herramientas.h"
 
 #ifndef _DUENYO_H
 #define _DUENYO_H
@@ -38,6 +39,7 @@ int Buscar_stock(list<Articulos> Art_en_stock, string buscado);
 
 Articulos Entregar_articulo(cliente& cliente_actual, list<Articulos>& Art_en_stock, unsigned int cant_deseada, string vendido);
 
+Articulos Buscar_herramienta(list<Articulos> Art_en_stock,string buscada);
 protected: 
     
 
