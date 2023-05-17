@@ -56,6 +56,10 @@ int main()
 	Lo_de_Juan.set_stock(stock_prueba); //stock del local inicializado
 
 	cliente Juanito("Juanito", 455524255, 1231232344, 40000);
+	list<Articulos> Compras_Juanito;
+	Art_ferr primero("tornillo", 10, 10);
+	Compras_Juanito.push_back(primero);
+
 	cliente Mateito("Mateito", 45524256, 12984847288, 20000);
 	cliente Tomasito("Tomasito", 45524257, 47348382393,7);
 	cliente Adriansito("Adriansito", 45524258, 32493499220, 5);//este se olvido la billetera
