@@ -11,7 +11,7 @@
 
 class Herramientas: public Art_ferr {
 public: 
-    
+    Herramientas(string nnombre, unsigned int nprecio, unsigned int ncantidad);
     ~Herramientas();
 
 

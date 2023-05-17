@@ -5,16 +5,14 @@
 
 #include "Ferreteria.h"
 
-/**
- * Ferreteria implementation
- */
 
 /**
  * @return string
  */
-Ferreteria::Ferreteria(string cNombre, string cDireccion, unsigned int cNum, string cdia) : Nombre(cNombre), Direccion(cDireccion), numero_ferreteria(cNum)
+Ferreteria::Ferreteria(string cNombre, string cDireccion, unsigned int cNum) : Nombre(cNombre), Direccion(cDireccion), numero_ferreteria(cNum)
 {
-    this->dia = cdia;
+
+
 }
 Ferreteria::~Ferreteria()
 {
@@ -72,5 +70,13 @@ void Ferreteria::terminar_dia()
         dia = (dia == "Sabado");
     else if (dia == "Domingo")
         dia = "Lunes";
+}
+void Ferreteria::set_stock(list<Articulos> Art_en_stock)
+{
+
+}
+void Ferreteria::set_cola_clientes(queue<cliente> sclientes)
+{
+    this->cola_clientes = sclientes;
 }
 string Ferreteria::dia = "Lunes";

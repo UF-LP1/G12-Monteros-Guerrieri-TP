@@ -13,6 +13,10 @@
 
 
 
+Art_Bazar::Art_Bazar(string nnombre, unsigned int nprecio, unsigned int ncantidad):Articulos( nnombre, nprecio, ncantidad)
+{
+}
+
 Art_Bazar::~Art_Bazar()
 {
 }

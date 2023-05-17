@@ -12,6 +12,7 @@
 class Art_electricos:public Articulos{
 
 public:
+	Art_electricos(string nnombre, unsigned int nprecio, unsigned int ncantidad);
  ~Art_electricos();
 protected:
 

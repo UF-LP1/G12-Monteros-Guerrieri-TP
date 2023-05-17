@@ -3,14 +3,14 @@
  */
 
 
+#ifndef _FERRETERIA_H
+#define _FERRETERIA_H
 #include <string>
 #include <queue>
 #include "Articulos.h"
 #include "cliente.h"
 
 
-#ifndef _FERRETERIA_H
-#define _FERRETERIA_H
 using namespace std;
 class Ferreteria {
 
@@ -25,7 +25,7 @@ protected:
 
 
 public:
-    Ferreteria(string cNombre, string cDireccion, unsigned int cNum, string cdia);
+    Ferreteria(string cNombre, string cDireccion, unsigned int cNum);
     ~Ferreteria();
 
     void set_dia(string);
@@ -46,8 +46,11 @@ public:
 
     void terminar_dia();
 
+    void set_stock(list<Articulos> Art_en_stock);
+
     static string dia;
 
+    void set_cola_clientes(queue<cliente> sclientes);
 };
 
 #endif //_FERRETERIA_H
