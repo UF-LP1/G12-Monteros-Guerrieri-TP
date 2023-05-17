@@ -22,13 +22,13 @@ void Duenyo::Hacer_inventario() {
 
 }
 
-void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero Mario, Despachante luigi, int eleccion) {
+void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero Mario, Despachante luigi, int eleccion, list<Articulos>& Articulos_vendidos) {
                                                                               //1=comprar articulos
     unsigned int dias_de_alquiler=0;                                          //2=contratar cerrajero
     switch (eleccion)                                                         //3=contratar plomero
     {                                                                         //4=pedir envio
-    case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual);           //5=alquilar
-        break;                                                                //6=cambiar producto
+    case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual, Articulos_vendidos);           //5=alquilar
+        break;                                                                                   //6=cambiar producto
     case 2:Jose.ofrecer_servicio(cliente_actual);                            
         break;
     case 3: Mario.ofrecer_servicio(cliente_actual);
@@ -53,7 +53,7 @@ unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)
     int i = 0;
     while (aux != lista_compra.end()) {
 
-        Presupuesto_total += aux->get_precio() * aux->get_stock();
+        Presupuesto_total += aux->get_precio() * aux->get_cantidad();
 
         aux++;
     }
@@ -67,7 +67,7 @@ void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, u
 
     while (factura != vendidos.end())
     {
-        cout << "factura" << endl << "objeto-------------" << factura->get_nombre_art() << endl << "cantidad-------------" << factura->get_stock() << endl << "precio unidad-------------" << factura->get_precio() << endl;
+        cout << "factura" << endl << "objeto-------------" << factura->get_nombre_art() << endl << "cantidad-------------" << factura->get_cantidad() << endl << "precio unidad-------------" << factura->get_precio() << endl;
 
         factura++;
 
@@ -78,15 +78,15 @@ void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, u
 
 void Duenyo::ofrecer_opciones()
 {
-    cout << "1) Comprar articulos" << endl << "2) Envio a domicilio" << endl << "3) Contratar plomero" << endl << "4) Contratar cerrajero" << endl;
+    cout << "1) Comprar articulos" << endl << "2) Contratar cerrajero" << endl << "3) Contratar plomero" << endl << "4)Envio a domicilio " <<"5)Alquilar una herramienta"<<endl<<"6) Cambiar un producto defectuoso"<< endl;
 }
-
-
-void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual)
+                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                            
+void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual, list<Articulos>& Articulos_vendidos)
 {
 
     list<Articulos>::iterator en_venta=stock.begin();
-
+    list<Articulos> Articulos_vendidos;
 
     while (en_venta != stock.end())
     {
@@ -94,7 +94,7 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual)
             cout << "No tenemos ese articulo" << endl;             //llamamos al metodo entregar articulo
         else
         {
-            Entregar_articulo(cliente_actual, stock, en_venta->get_stock(), en_venta->get_nombre_art());
+            Articulos_vendidos.push_back(Entregar_articulo(cliente_actual, stock, en_venta->get_cantidad(), en_venta->get_nombre_art()));
         }
         en_venta++;
     }
@@ -107,35 +107,39 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual)
     while (indice_busqueda != Art_en_stock.end())
     {
         if (indice_busqueda->get_nombre_art() == buscado)
-            return indice_busqueda->get_stock();
+            return indice_busqueda->get_cantidad();
         indice_busqueda++;
     }
     return -1;
 }
 
- void Duenyo::Entregar_articulo(cliente& cliente_actual, list<Articulos>& Art_en_stock, unsigned int cant_deseada, string vendido)
+ Articulos Duenyo::Entregar_articulo(cliente& cliente_actual, list<Articulos>& Art_en_stock, unsigned int cant_deseada, string vendido)
  {
      list<Articulos> ::iterator aux_stock = Art_en_stock.begin();
      while (aux_stock != Art_en_stock.end())
      {
          if (aux_stock->get_nombre_art() == vendido)
          {
-             if (aux_stock->get_stock() > cant_deseada) {
-                 aux_stock->set_stock(aux_stock->get_stock() - cant_deseada);
+             if (aux_stock->get_cantidad() > cant_deseada) {
+                 aux_stock->set_stock(aux_stock->get_cantidad() - cant_deseada);
                  cliente_actual.incremento_deuda(cant_deseada * aux_stock->get_precio());
-                 return;
+                 Articulos resultado = (*aux_stock);
+                 resultado.set_cantidad(cant_deseada);
+                 return resultado;
              }
-             else if (aux_stock->get_stock() == cant_deseada)
+             else if (aux_stock->get_cantidad() == cant_deseada)
              {
                  cliente_actual.incremento_deuda(cant_deseada * aux_stock->get_precio()); //si vendimos hasta el ultimo de esos articulos lo sacamos del stock
+                 Articulos resultado=(*aux_stock);
                  Art_en_stock.erase(aux_stock);                                           // el stock solo debe tener elementos que la ferreteria aun tenga para vender 
-                 return;
+                 return resultado;
              }
              else
              {
-                 cliente_actual.incremento_deuda(aux_stock->get_precio() * aux_stock->get_stock());//si no queda stock le damos al cliente lo que tenemos
+                 cliente_actual.incremento_deuda(aux_stock->get_precio() * aux_stock->get_cantidad());//si no queda stock le damos al cliente lo que tenemos
+                 Articulos resultado = (*aux_stock);
                  Art_en_stock.erase(aux_stock);                                                    //y tambien sacamos el articulo de la lista
-                 return;
+                 return resultado;
              }
          }
          aux_stock++;

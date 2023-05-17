@@ -18,12 +18,17 @@ unsigned int Articulos::get_precio() {
     return this->Precio;
 }
 
-unsigned int Articulos::get_stock() {
+unsigned int Articulos::get_cantidad() {
     return this->cantidad;
 }
 
 void Articulos::set_precio( unsigned int nprecio) {
     this->Precio = nprecio;
+}
+
+void Articulos::set_cantidad(unsigned int scantidad)
+{
+    this->cantidad = scantidad;
 }
 
 /**
