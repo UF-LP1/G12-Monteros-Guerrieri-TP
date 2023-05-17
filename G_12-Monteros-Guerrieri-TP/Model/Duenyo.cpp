@@ -30,7 +30,7 @@ void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, C
     case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual); //5=alquilar
         break;                                                      //6=cambiar producto
     case 2:Jose.ofrecer_servicio(cliente_actual);
-
+        break;
     }
 }
 
