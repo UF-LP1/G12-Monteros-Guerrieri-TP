@@ -38,7 +38,3 @@ bool Empleado::get_disponibilidad() {
 void Empleado::ofrecer_servicio(cliente cliente_actual)
 {
 }
-
-void Empleado::Cobrar()
-{
-}

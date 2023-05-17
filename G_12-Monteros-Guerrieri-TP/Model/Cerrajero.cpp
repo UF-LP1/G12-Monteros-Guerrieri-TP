@@ -3,8 +3,8 @@
 
 #include "Cerrajero.h"
 
-#define costo_llaves=600
-#define costo_servicios= 900;
+//#define costo_llaves=600
+//#define costo_servicios= 900;
 
 Cerrajero::Cerrajero(unsigned int alcance)
 {
@@ -79,9 +79,9 @@ void Cerrajero::ofrecer_servicio(cliente cliente_actual)
                 default:cout << "por favor elija un servicio de las opciones" << endl;
                     break;
                 }
-                primera_eleccion = false;
-                break;
+                
             }
+            primera_eleccion = false;
             break;
 
         case 3:cliente_actual.Pagar(5000, 3);

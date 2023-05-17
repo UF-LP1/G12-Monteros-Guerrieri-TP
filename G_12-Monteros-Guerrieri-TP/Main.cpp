@@ -9,6 +9,9 @@ int main()
 {
 	Ferreteria Lo_de_Juan("Lo de juan", "Dorrego 999", 51024272);
 	Duenyo Juan("Juan");
+	Cerrajero Jose(20);
+	Plomero Mario;
+	Despachante Luigi("Fiat 600",100,15);
 
 	
 	bool flag_atencion = true;
@@ -27,7 +30,7 @@ int main()
 				Juan.ofrecer_opciones();
 				cin >> eleccion;
 
-				Juan.Atender_clientes(cliente_actual, eleccion);
+				Juan.Atender_clientes(Lo_de_Juan,cliente_actual,Jose,Mario,Luigi, eleccion);
 
 				cout << "¿Se le ofrece algo mas?" << endl<<"Y/N ?"<<endl;
 				cin >> seguir_comprando;

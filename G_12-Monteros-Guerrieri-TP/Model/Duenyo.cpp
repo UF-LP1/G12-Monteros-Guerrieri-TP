@@ -22,16 +22,27 @@ void Duenyo::Hacer_inventario() {
 
 }
 
-void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero mario, Despachante luigi, int eleccion) {
-                                                                    //1=comprar articulos
-                                                                    //2=contratar cerrajero
-    switch (eleccion)                                               //3=contratar plomero
-    {                                                               //4=pedir envio
-    case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual); //5=alquilar
-        break;                                                      //6=cambiar producto
-    case 2:Jose.ofrecer_servicio(cliente_actual);
+void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero Mario, Despachante luigi, int eleccion) {
+                                                                              //1=comprar articulos
+    unsigned int dias_de_alquiler=0;                                          //2=contratar cerrajero
+    switch (eleccion)                                                         //3=contratar plomero
+    {                                                                         //4=pedir envio
+    case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual);           //5=alquilar
+        break;                                                                //6=cambiar producto
+    case 2:Jose.ofrecer_servicio(cliente_actual);                            
+        break;
+    case 3: Mario.ofrecer_servicio(cliente_actual);
+        break;
+    case 4:
+        break;
+    case 5:cout << "¿por cuantos dias desea alquilar la herramienta?" << endl;
+        cin >> dias_de_alquiler;
+        cliente_actual.alquilar_herramienta();
+        break;
+    case 6:
         break;
     }
+    //no se necesita un default ni un ciclo porque la variable qeu se usa en el switch es recibida como parametro
 }
 
 unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)

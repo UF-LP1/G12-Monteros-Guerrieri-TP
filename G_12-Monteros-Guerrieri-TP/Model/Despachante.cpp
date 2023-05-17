@@ -5,8 +5,11 @@
 
 #include "Despachante.h"
 
-Despachante::Despachante()
+Despachante::Despachante(string cvehiculo, unsigned int ccapacidad, unsigned int calcance)
 {
+    this->vehiculo = cvehiculo;
+    this->capacidad_kg = ccapacidad;
+    this->alcance_servicio_km = calcance;
 }
 Despachante::~Despachante()
 {
@@ -29,6 +32,7 @@ unsigned int Despachante::get_capacidad()
     return this->capacidad_kg;
 }
 
-/**
- * @return string
- */
+void Despachante::ofrecer_servicio(cliente cliente_actual)
+{
+}
+
