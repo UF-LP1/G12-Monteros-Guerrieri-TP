@@ -56,3 +56,21 @@ list<Articulos> Ferreteria::get_stock()
 {
     return this->stock;
 }
+
+void Ferreteria::terminar_dia()
+{
+    if (this->dia == "lunes")
+        this->dia = "Martes";
+    else if (this->dia == "Martes")
+        this->dia = "Miercoles";
+    else if (this->dia == "Miercoles")
+        this->dia = "Jueves";
+    else if (this->dia == "Jueves")
+        this->dia = "Viernes";
+    else if (this->dia == "Viernes")
+        this->dia = "Sabado";
+    else if (this->dia == "Sabado")
+        this->dia = "Domingo";
+    else if (this->dia == "Domingo")
+        this->dia = "Lunes";
+}

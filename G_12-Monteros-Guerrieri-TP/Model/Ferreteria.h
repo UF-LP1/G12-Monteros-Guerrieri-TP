@@ -18,7 +18,7 @@ class Ferreteria {
 
 protected: 
 
-    string dia;
+    static string dia;
     const string Nombre;
     const string Direccion;
     const unsigned int numero_ferreteria;
@@ -45,6 +45,8 @@ public:
     void despedirse_de_cliente(); //popea al primer cliente (el mas viejo digamos), debe llamarse al terminar de atender al actual cliente
 
     list<Articulos> get_stock();
+
+    void terminar_dia();
 };
 
 #endif //_FERRETERIA_H

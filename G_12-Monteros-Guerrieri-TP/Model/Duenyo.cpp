@@ -22,12 +22,14 @@ void Duenyo::Hacer_inventario() {
 
 }
 
-void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan,cliente cliente_actual, int eleccion) {
+void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero mario, Despachante luigi, int eleccion) {
                                                                     //1=comprar articulos
                                                                     //2=contratar cerrajero
     switch (eleccion)                                               //3=contratar plomero
     {                                                               //4=pedir envio
-    case 1:vender_articulos(Lo_de_Juan.get_stock(),;
+    case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual); //5=alquilar
+        break;
+    case 2:
 
     }
 }
@@ -62,18 +64,20 @@ void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, u
     cout << "precio total               " << total << endl << endl;
 }
 
+
 void Duenyo::ofrecer_opciones()
 {
     cout << "1) Comprar articulos" << endl << "2) Envio a domicilio" << endl << "3) Contratar plomero" << endl << "4) Contratar cerrajero" << endl;
 }
 
-void Duenyo::vender_articulos(list<Articulos> &stock, cliente &cliente_actual)
+
+void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual)
 {
-    list<Articulos> aux = cliente_actual.get_lista_compra();
-    list<Articulos>::iterator en_venta=aux.begin();
+
+    list<Articulos>::iterator en_venta=stock.begin();
 
 
-    while (en_venta != aux.end())
+    while (en_venta != stock.end())
     {
         if (Buscar_stock(stock, en_venta->get_nombre_art()) < 0)   //buscamos un articulo en el stock de la tienda y si se encuentra
             cout << "No tenemos ese articulo" << endl;             //llamamos al metodo entregar articulo
@@ -100,6 +104,7 @@ void Duenyo::vender_articulos(list<Articulos> &stock, cliente &cliente_actual)
 
  void Duenyo::Entregar_articulo(cliente& cliente_actual, list<Articulos>& Art_en_stock, unsigned int cant_deseada, string vendido)
  {
+     Articulos encontrado();
      list<Articulos> ::iterator aux_stock = Art_en_stock.begin();
      while (aux_stock != Art_en_stock.end())
      {
@@ -125,6 +130,5 @@ void Duenyo::vender_articulos(list<Articulos> &stock, cliente &cliente_actual)
          }
          aux_stock++;
      }
- 
  }
 

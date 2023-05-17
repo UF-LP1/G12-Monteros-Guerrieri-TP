@@ -12,6 +12,7 @@
 
 Empleado::Empleado()
 {
+    this->alcance_servicio_km = 0;
     this->disponible = true;
 }
 
@@ -32,4 +33,12 @@ void Empleado::set_disponibilidad(bool sdisponibilidad) {
 
 bool Empleado::get_disponibilidad() {
     return this->disponible;
+}
+
+void Empleado::ofrecer_servicio(cliente cliente_actual)
+{
+}
+
+void Empleado::Cobrar()
+{
 }

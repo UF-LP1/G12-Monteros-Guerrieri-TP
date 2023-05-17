@@ -8,7 +8,7 @@
 #include <list>
 #include <iostream>
 #include "Ferreteria.h"
-
+#include "Empleado.h"
 
 #ifndef _DUENYO_H
 #define _DUENYO_H
@@ -24,7 +24,7 @@ void Cobrar_a_Cliente();
     
 void Hacer_inventario();
     
-void Atender_clientes(Ferreteria& Lo_de_Juan,cliente cliente_actual, int eleccion);
+void Atender_clientes(Ferreteria& Lo_de_Juan,cliente& cliente_actual, Cerrajero Jose, Plomero mario, Despachante luigi, int eleccion);
 
 unsigned int generarPresupuesto(list<Articulos> lista_compra);
 
@@ -32,7 +32,7 @@ void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned 
 
 void ofrecer_opciones();
 
-void vender_articulos(list<Articulos> &stock,cliente &cliente_actual);
+void vender_articulos(list<Articulos> stock,cliente &cliente_actual);
 
 int Buscar_stock(list<Articulos> Art_en_stock, string buscado);
 

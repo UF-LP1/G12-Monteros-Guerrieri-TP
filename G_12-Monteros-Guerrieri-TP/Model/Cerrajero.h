@@ -21,7 +21,6 @@ public:
 
 private:
 
-    unsigned int alcance_servicio_km;
 
 };
 
