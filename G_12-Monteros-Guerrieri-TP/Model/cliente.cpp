@@ -55,20 +55,15 @@ void cliente::set_numero_cliente(unsigned int snumero_cliente)
     this->numero_cliente = snumero_cliente;
 }
 
-void cliente::contratar_servicio() {
-
-}
-
-void cliente::agregar_art(Articulos* agregado)
-{
-    this->lista_compra.push_back(*agregado);
-
-}
-
  int cliente::get_cant_articulos()
 {
     return this->lista_compra.size();
 }
+
+ void cliente::set_lista_compra(list<Articulos> slista_compra)
+ {
+     this->lista_compra = slista_compra;
+ }
 
 void cliente::liberar_memoria()
 {

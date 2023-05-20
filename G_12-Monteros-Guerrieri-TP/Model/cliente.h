@@ -35,11 +35,9 @@ unsigned int get_numero_cliente();
 
 void set_numero_cliente(unsigned int snumero_cliente);
 
-void contratar_servicio();
-
-void agregar_art(Articulos* agregado); //agrega un articulo a la lista de compra del cliente, dsp se sacara
-
 int get_cant_articulos();
+
+void set_lista_compra(list<Articulos> slista_compra);
 
 void liberar_memoria(); //transformar esto en el destructor
     

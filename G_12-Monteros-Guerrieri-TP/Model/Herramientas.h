@@ -5,7 +5,7 @@
 
 #ifndef _HERRAMIENTAS_H
 #define _HERRAMIENTAS_H
-#include"Articulos.h"
+#include "Articulos.h"
 #include "Art_ferr.h"
 
 

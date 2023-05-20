@@ -19,7 +19,10 @@ int main()
 	Plomero Mario;
 	Despachante Luigi("Fiat 600",100,15);
 	list<Articulos> Articulos_vendidos;
-	
+
+	unsigned int dias_de_alquiler = 0;
+	string nombre_herramienta;
+	string modelo_herramienta;
 	
 	bool flag_atencion = true;
 	bool flag_cliente = true;
@@ -29,23 +32,61 @@ int main()
 	unsigned int total_pagar=0;
 
 	//declaracion de variables de archivos y lectura de archivos
-	string ruta_stock= ("Archivo_Stock_Ferreteria");
+
 	fstream leer_stock;
-	leer_stock.open(ruta_stock, ios::in);
-
+	leer_stock.open("Archivo_Stock_Ferreteria.txt", ios::in);
 	Lo_de_Juan.set_stock(Leer_stock(leer_stock));
+	leer_stock.close();
 
+	fstream leer_clientes;
+	leer_clientes.open("Archivo_clientes.txt", ios::in);
+	fstream leer_listas_de_compra;
+	leer_listas_de_compra.open("Archivo_listas_de_compra.txt", ios::in);
+
+	Lo_de_Juan.set_cola_clientes(Leer_clientes(leer_clientes, leer_listas_de_compra));
+
+	//Aca empieza la funcionalidad
 
 	do {
 		cout << "Bienvenido" << endl;
+		
 		do {
 			cliente cliente_actual = Lo_de_Juan.get_cliente();
 			do {
 				cout << "¿Que se le ofrece?" << endl;
-				Juan.ofrecer_opciones();
+				cout << "1) Comprar articulos" << endl << "2) Contratar cerrajero" << endl << "3) Contratar plomero" << endl << "4)Envio a domicilio " << "5)Alquilar una herramienta" << endl << "6) Cambiar un producto defectuoso" << endl;
 				cin >> eleccion;
 
-				Juan.Atender_clientes(Lo_de_Juan,cliente_actual,Jose,Mario,Luigi, eleccion,Articulos_vendidos);
+				//Juan.Atender_clientes(Lo_de_Juan,cliente_actual,Jose,Mario,Luigi, eleccion,Articulos_vendidos);
+
+				switch (eleccion)
+				{
+				case 1:Juan.vender_articulos(Lo_de_Juan.get_stock(), cliente_actual, Articulos_vendidos);
+					break;
+				case 2:Jose.ofrecer_servicio(cliente_actual);
+					break;
+				case 3: Mario.ofrecer_servicio(cliente_actual);
+					break;
+				case 4:
+					break;
+				case 5:
+					cout << "¿que herramienta necesita?" << endl;
+					cin >> nombre_herramienta;
+
+					if (Juan.Buscar_stock(Lo_de_Juan.get_stock(), nombre_herramienta) > 0) {
+						cout << "¿algun modelo epecifico?" << endl;
+						cin >> modelo_herramienta;
+						cout << "¿por cuantos dias desea alquilar la herramienta?" << endl;
+						cin >> dias_de_alquiler;
+						alq_herramientas herr_alquilada(nombre_herramienta, modelo_herramienta);
+						cliente_actual.alquilar_herramienta(herr_alquilada, dias_de_alquiler);
+					}
+					else
+						cout << "Disculpe, no tenemos esa herramienta" << endl;
+					break;
+				case 6:
+					break;
+				}
 
 				cout << "¿Se le ofrece algo mas?" << endl<<"Y/N ?"<<endl;
 				cin >> seguir_comprando;

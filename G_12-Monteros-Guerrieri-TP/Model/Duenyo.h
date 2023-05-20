@@ -31,8 +31,6 @@ unsigned int generarPresupuesto(list<Articulos> lista_compra);
 
 void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total);
 
-void ofrecer_opciones();
-
 void vender_articulos(list<Articulos> stock,cliente &cliente_actual,list<Articulos>& Articulos_vendidos);
 
 int Buscar_stock(list<Articulos> Art_en_stock, string buscado);

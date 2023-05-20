@@ -23,38 +23,38 @@ void Duenyo::Hacer_inventario() {
 }
 
 void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero Mario, Despachante luigi, int eleccion, list<Articulos>& Articulos_vendidos) {
-                                                                              //1=comprar articulos
-    unsigned int dias_de_alquiler=0;     
-    string nombre_herramienta;         
-    string modelo_herramienta;                                                //2=contratar cerrajero
-    switch (eleccion)                                                         //3=contratar plomero
-    {                                                                         //4=pedir envio
-    case 1:vender_articulos(Lo_de_Juan.get_stock(),cliente_actual, Articulos_vendidos);           //5=alquilar
-        break;                                                                                   //6=cambiar producto
-    case 2:Jose.ofrecer_servicio(cliente_actual);                            
-        break;
-    case 3: Mario.ofrecer_servicio(cliente_actual);
-        break;
-    case 4:
-        break;
-    case 5:
-        cout << "¿que herramienta necesita?" << endl;
-        cin >> nombre_herramienta;
+                                                                                                  
+    
+        //1=comprar articulos
+        //2=contratar cerrajero
+        //3=contratar plomero
+        //4=pedir envio
+        //5=alquilar
+        //6=cambiar producto
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-        if (Buscar_stock(Lo_de_Juan.get_stock(), nombre_herramienta) > 0) {
-            cout << "¿algun modelo epecifico?" << endl;
-            cin >> modelo_herramienta;
-            cout << "¿por cuantos dias desea alquilar la herramienta?" << endl;
-            cin >> dias_de_alquiler;
-            alq_herramientas herr_alquilada(nombre_herramienta,modelo_herramienta);
-            cliente_actual.alquilar_herramienta(herr_alquilada,dias_de_alquiler);
-        }
-        else
-            cout << "Disculpe, no tenemos esa herramienta" << endl;
-        break;
-    case 6:
-        break;
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //no se necesita un default ni un ciclo porque la variable qeu se usa en el switch es recibida como parametro
 }
 
@@ -86,12 +86,6 @@ void Duenyo::Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, u
 
     }
     cout << "precio total               " << total << endl << endl;
-}
-
-
-void Duenyo::ofrecer_opciones()
-{
-    cout << "1) Comprar articulos" << endl << "2) Contratar cerrajero" << endl << "3) Contratar plomero" << endl << "4)Envio a domicilio " <<"5)Alquilar una herramienta"<<endl<<"6) Cambiar un producto defectuoso"<< endl;
 }
                                                                                                                                                                                               
                                                                                                                                                                                                                                                                                                                                                                                             
