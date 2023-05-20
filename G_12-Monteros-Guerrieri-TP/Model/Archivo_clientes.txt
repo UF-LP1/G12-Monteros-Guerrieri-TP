@@ -1,0 +1,11 @@
+Nombre, DNI, Num_Tarjeta, fondos, Permiso_Magnetica
+Mateito, 45524256, 12984847288, 20000, false       
+Tomasito, 45524257, 47348382393, 7, false
+Adriansito, 45524258, 32493499220, 5, false    
+Valencita, 45524259, 34782643237, 10000, false 
+Camisita, 45524260, 202043800, 5000, false
+Ezequielito, 45524261, 9340240929084, 100000, true
+Solcita, 45524262, 234989797377, 238930, false     
+Stephita, 45524263, 23894392, 500000, false
+Ariancita, 45524264, 3287936396, 45, true
+Juanito, 455524255, 1231232344, 40000, false 

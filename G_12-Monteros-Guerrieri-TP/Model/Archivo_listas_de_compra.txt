@@ -1,0 +1,21 @@
+Nombre, precio, cantidad, Herramienta
+tornillo, 0, 10, false          
+tarugo, 0, 4, false
+tornillo, 0, 10, false             
+Martillo, 0, 1,true          
+cables", 0, 12, false          
+adaptador tipo a, 0, 1, false  
+adaptdor tipo b, 0, 2, false   
+Mecha mediana, 0, 3, false     
+enchufe de pared, 0, 1, false  
+tender grande, 0, 1, false     
+cepillo de baño, 0, 2, false   
+taladro, 0, 1, true          
+moladora, 0, 1, true      
+Mecha mediana, 0, 100, false   
+tabla de planchar, 0, 2, false
+tarugo, 0, 400, false 
+clavos, 0, 40, false           
+Barral de cortina, 0, 25, false
+lampara, 0, 10, false
+Arandela, 0, 20, false          

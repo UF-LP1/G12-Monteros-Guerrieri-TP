@@ -7,10 +7,10 @@
 enum tipo_de_pago
 {  Mercado_pago=1,tarjeta,efectivo };
 
-cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta, int cfondos): Nombre_cliente(nombre_c), DNI(cDNI), Numero_de_tarjeta(cnum_tarjeta)
+cliente::cliente(string nombre_c, unsigned int cDNI, unsigned int cnum_tarjeta, int cfondos, bool p_magnetica): Nombre_cliente(nombre_c), DNI(cDNI), Numero_de_tarjeta(cnum_tarjeta)
 {
     this->numero_cliente = 0;
-    this->Permiso_magnetica = false;
+    this->Permiso_magnetica = p_magnetica;
     this->deuda = 0;
     this->fondos = cfondos;
 }

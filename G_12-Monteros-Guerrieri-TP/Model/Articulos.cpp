@@ -1,10 +1,11 @@
 
 #include "Articulos.h"
 
-Articulos::Articulos(string nnombre, unsigned int nprecio, unsigned int ncantidad): Nombre_art(nnombre)
+Articulos::Articulos(string nnombre, unsigned int nprecio, unsigned int ncantidad, bool cHerramienta): Nombre_art(nnombre)
 {
     this->cantidad = ncantidad;
     this->Precio = nprecio;
+    this->Herramienta = cHerramienta;
 }
 Articulos::~Articulos()
 {

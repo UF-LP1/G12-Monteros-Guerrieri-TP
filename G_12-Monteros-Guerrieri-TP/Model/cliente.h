@@ -16,7 +16,7 @@ using namespace std;
 class cliente {
 public: 
     
-    cliente(string nombre, unsigned int cDNI, unsigned int cnum_tarjeta, int cfondos);
+    cliente(string nombre, unsigned int cDNI, unsigned int cnum_tarjeta, int cfondos,bool p_magnetica);
     ~cliente();
 
 unsigned int get_tarjeta();

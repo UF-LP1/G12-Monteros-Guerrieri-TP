@@ -38,6 +38,7 @@
     <ClCompile Include="Model\Servicio.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Datos_Prueba.h" />
     <ClInclude Include="Model\alq_herramientas.h" />
     <ClInclude Include="Model\Articulos.h" />
     <ClInclude Include="Model\Art_Bazar.h" />

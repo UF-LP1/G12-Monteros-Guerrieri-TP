@@ -19,56 +19,7 @@ int main()
 	list<Articulos> Articulos_vendidos;
 
 	//abajo de esto es espacio de declaracion de datos de prueba
-	list<Articulos>stock_prueba;	
-	Art_ferr tor("tornillo", 10, 200);
-	Art_ferr tar("tarugo", 9, 200);
-	Art_ferr mar("Martillo", 1500, 40);
-	Art_electricos cab("cables", 100, 1000);
-	Art_electricos adap_a("adaptador tipo a", 100, 20);
-	Art_electricos adap_b("adaptdor tipo b", 120, 25);
-	Art_ferr Mecha_med("Mecha mediana", 50, 100);
-	Art_electricos ench("enchufe de pared", 50, 100);
-	Art_Bazar ten_g("tender grande", 500, 10);
-	Art_Bazar cep_b("cepillo de baño", 300, 15);
-	Herramientas tala("taladro", 15000, 9);
-	Herramientas mola("moladora", 20000, 10);
-	Art_Bazar tabla_p("tabla de planchar", 3000, 7);
-	Art_ferr clav("clavos", 5, 10000);
-	Art_Bazar barr_cor("Barral de cortina",1000,20);
-	Art_electricos lamp("lampara", 1000, 10);
-	stock_prueba.push_back(tor);
-	stock_prueba.push_back(tar);
-	stock_prueba.push_back(mar);
-	stock_prueba.push_back(cab);
-	stock_prueba.push_back(adap_a);
-	stock_prueba.push_back(adap_b);
-	stock_prueba.push_back(Mecha_med);
-	stock_prueba.push_back(ench);
-	stock_prueba.push_back(ten_g);
-	stock_prueba.push_back(cep_b);
-	stock_prueba.push_back(tala);
-	stock_prueba.push_back(mola);
-	stock_prueba.push_back(tabla_p);
-	stock_prueba.push_back(clav);
-	stock_prueba.push_back(barr_cor);
-	stock_prueba.push_back(lamp);
-
-	Lo_de_Juan.set_stock(stock_prueba); //stock del local inicializado
-
-	cliente Juanito("Juanito", 455524255, 1231232344, 40000);
-	list<Articulos> Compras_Juanito;
-	Art_ferr primero("tornillo", 10, 10);
-	Compras_Juanito.push_back(primero);
-
-	cliente Mateito("Mateito", 45524256, 12984847288, 20000);
-	cliente Tomasito("Tomasito", 45524257, 47348382393,7);
-	cliente Adriansito("Adriansito", 45524258, 32493499220, 5);//este se olvido la billetera
-	cliente Valencita("Valencita", 45524259, 34782643237, 10000);
-	cliente Camisita("Camisita", 45524260, 202043800, 5000);
-	cliente Ezequilito("Ezequielito", 45524261, 9340240929084, 100000);
-	cliente Solcita("Solcita", 45524262, 234989797377, 238930);
-	cliente Stephita("Stephita", 45524263, 23894392, 500000);
-	cliente Ariancita("Ariancita", 45524264, 3287936396, 45);
+	
 	
 	bool flag_atencion = true;
 	bool flag_cliente = true;

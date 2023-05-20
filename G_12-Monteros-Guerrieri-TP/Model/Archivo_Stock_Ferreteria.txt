@@ -1,0 +1,17 @@
+Nombre, precio, cantidad, Herramienta
+"tornillo", 10, 200, false          
+"tarugo", 9, 200, false             
+"Martillo", 1500, 40, true        
+"cables", 100, 1000, false          
+"adaptador tipo a", 100, 20, false  
+"adaptdor tipo b", 120, 25, false   
+"Mecha mediana", 50, 100, false     
+"enchufe de pared", 50, 100, false 
+"tender grande", 500, 10, false     
+"cepillo de baño", 300, 15, false   
+"taladro", 15000, 9, true          
+"moladora", 20000, 10, true        
+"tabla de planchar", 3000, 7, false 
+"clavos", 5, 10000, false           
+"Barral de cortina", 1000, 20, false
+"lampara", 1000, 10, false          
