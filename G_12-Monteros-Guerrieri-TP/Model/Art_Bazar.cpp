@@ -13,7 +13,7 @@
 
 
 
-Art_Bazar::Art_Bazar(string nnombre, unsigned int nprecio, unsigned int ncantidad, bool nHerramienta):Articulos( nnombre, nprecio, ncantidad, nHerramienta )
+Art_Bazar::Art_Bazar(string nnombre, unsigned int nprecio, unsigned int ncantidad):Articulos(nnombre, nprecio, ncantidad)
 {
 }
 

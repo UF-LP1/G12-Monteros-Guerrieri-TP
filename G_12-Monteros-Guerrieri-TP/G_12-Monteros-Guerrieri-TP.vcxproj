@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model\alq_herramientas.cpp" />
     <ClCompile Include="Model\Articulos.cpp" />
@@ -38,7 +39,7 @@
     <ClCompile Include="Model\Servicio.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Datos_Prueba.h" />
+    <ClInclude Include="Funciones.h" />
     <ClInclude Include="Model\alq_herramientas.h" />
     <ClInclude Include="Model\Articulos.h" />
     <ClInclude Include="Model\Art_Bazar.h" />
@@ -59,6 +60,11 @@
     <ClInclude Include="Model\Plomero.h" />
     <ClInclude Include="Model\Servicio.h" />
     <ClInclude Include="Model\TURNOS.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Model\Archivo_clientes.txt" />
+    <Text Include="Model\Archivo_listas_de_compra.txt" />
+    <Text Include="Model\Archivo_Stock_Ferreteria.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

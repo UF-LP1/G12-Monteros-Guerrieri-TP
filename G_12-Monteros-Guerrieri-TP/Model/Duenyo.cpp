@@ -133,7 +133,7 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual, li
          if (aux_stock->get_nombre_art() == vendido)
          {
              if (aux_stock->get_cantidad() > cant_deseada) {
-                 aux_stock->set_stock(aux_stock->get_cantidad() - cant_deseada);
+                 aux_stock->set_cantidad(aux_stock->get_cantidad() - cant_deseada);
                  cliente_actual.incremento_deuda(cant_deseada * aux_stock->get_precio());
                  Articulos resultado = (*aux_stock);
                  resultado.set_cantidad(cant_deseada);

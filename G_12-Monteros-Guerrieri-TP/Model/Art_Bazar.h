@@ -14,7 +14,7 @@ class Art_Bazar:public Articulos {
 protected: 
     
 public:
-    Art_Bazar(string nnombre, unsigned int nprecio, unsigned int ncantidad, bool nHerramienta);
+    Art_Bazar(string nnombre, unsigned int nprecio, unsigned int ncantidad);
     ~Art_Bazar();
 
 

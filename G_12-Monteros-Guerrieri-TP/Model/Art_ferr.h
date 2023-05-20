@@ -12,11 +12,8 @@
 
 class Art_ferr :public Articulos{
 public:
-    Art_ferr(string nnombre, unsigned int nprecio, unsigned int ncantidad, bool nHerramienta);
+    Art_ferr(string nnombre, unsigned int nprecio, unsigned int ncantidad);
     ~Art_ferr();
-protected: 
-    
- 
 };
 
 #endif //_ART_FERR_H

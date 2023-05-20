@@ -6,6 +6,8 @@
 #include "Model/Art_ferr.h"
 #include "Model/Art_electricos.h"
 #include "Model/Herramientas.h"
+#include <fstream>
+#include "Funciones.h"
 
 using namespace std;
 
@@ -17,8 +19,6 @@ int main()
 	Plomero Mario;
 	Despachante Luigi("Fiat 600",100,15);
 	list<Articulos> Articulos_vendidos;
-
-	//abajo de esto es espacio de declaracion de datos de prueba
 	
 	
 	bool flag_atencion = true;
@@ -27,6 +27,14 @@ int main()
 	int eleccion;
 	char seguir_comprando;
 	unsigned int total_pagar=0;
+
+	//declaracion de variables de archivos y lectura de archivos
+	string ruta_stock= ("Archivo_Stock_Ferreteria");
+	fstream leer_stock;
+	leer_stock.open(ruta_stock, ios::in);
+
+	Lo_de_Juan.set_stock(Leer_stock(leer_stock));
+
 
 	do {
 		cout << "Bienvenido" << endl;
