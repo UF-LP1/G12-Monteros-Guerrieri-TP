@@ -20,9 +20,11 @@ list<Articulos> Leer_stock(fstream& Stock)
 	}
 
 	getline(Stock, headers);
+
+	Stock >> nombre_aux >> coma >> precio_aux >> coma >> cantidad_aux;
 	while (Stock)
 	{
-		Stock >> nombre_aux >> coma >> cantidad_aux >> coma >> precio_aux;
+		
 
 		if (nombre_aux == "tornillo" || nombre_aux == "tarugo" || nombre_aux == "Mecha" || nombre_aux == "clavos") //una forma rudimentaria de diferenciar las clases
 		{
@@ -39,7 +41,9 @@ list<Articulos> Leer_stock(fstream& Stock)
 			Art_Bazar aux_bazar(nombre_aux, precio_aux, cantidad_aux);
 			lectura_stock.push_back(aux_bazar);
 		}
-	}
+		Stock >> nombre_aux >> coma >> precio_aux >> coma >> cantidad_aux;
+	} 
+	Stock.close();
 	return lectura_stock;
 }
 
@@ -70,6 +74,7 @@ list<Herramientas> Leer_herramientas_stock(fstream& Herramientas_stock)
 		Herramientas agregado(nombre_aux, precio_aux, cantidad_aux, seguro_aux, precio_dia_aux);
 		lista_retorno.push_back(agregado);
 	}
+	Herramientas_stock.close();
 	return lista_retorno;
 }
 
@@ -94,41 +99,52 @@ queue<cliente> Leer_clientes(fstream& cola, fstream& listas_compra)
 	unsigned int num_tarjeta_aux;
 	int fondos_aux;
 	bool magnetica_aux;
+	string nombre_art_aux;
 	unsigned int cantidad_aux;
 	unsigned int precio_aux;
 	list<Articulos> lista_compra_actual; //auxiliar para leer las listas de compra que corresponderan a cada cliente
 
 	getline(cola, headers);
 	getline(listas_compra, headers);
-	
+
+	cola >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
+
+	listas_compra >> nombre_art_aux >> coma >> precio_aux  >> coma >> cantidad_aux;
+
 	while (cola)
 	{
-		cola >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
 		cliente cliente_aux(nombre_aux, DNI_aux, num_tarjeta_aux, fondos_aux, magnetica_aux);
+
 
 		for (i = 0; i < 2; i++) //hacemos lo mismo que en leer stock pero solo dos articulos por cliente
 		{
-			listas_compra >> nombre_aux >> coma >> cantidad_aux >> coma >> precio_aux;
+			
 
 			if (nombre_aux == "tornillo" || nombre_aux == "tarugo" || nombre_aux == "Mecha" || nombre_aux == "clavos") //una forma rudimentaria de diferenciar las clases
 			{
-				Art_ferr aux_ferr(nombre_aux, precio_aux, cantidad_aux);
+				Art_ferr aux_ferr(nombre_art_aux, precio_aux, cantidad_aux);
 				lista_compra_actual.push_back(aux_ferr);
 			}
 			else if (nombre_aux == "cables" || nombre_aux == "adaptador tipo a" || nombre_aux == "adaptador tipo b" || nombre_aux == "enchufe de pared" || nombre_aux == "lampara")
 			{
-				Art_electricos aux_elec(nombre_aux, precio_aux, cantidad_aux);
+				Art_electricos aux_elec(nombre_art_aux, precio_aux, cantidad_aux);
 				lista_compra_actual.push_back(aux_elec);
 			}
 			else
 			{
-				Art_Bazar aux_bazar(nombre_aux, precio_aux, cantidad_aux);
+				Art_Bazar aux_bazar(nombre_art_aux, precio_aux, cantidad_aux);
 				lista_compra_actual.push_back(aux_bazar);
 			}
+			listas_compra >> nombre_aux >> coma >> cantidad_aux >> coma >> precio_aux;
 		}
 		cliente_aux.set_lista_compra(lista_compra_actual);
 
+		cola >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
+
 		Cola_clientes.push(cliente_aux);
 	}
+
+	listas_compra.close();
+	cola.close();
 	return Cola_clientes;
 }

@@ -9,6 +9,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de origen\data_files">
+      <UniqueIdentifier>{ea04e1ea-0197-4739-a57f-50f2c9e6b942}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\alq_herramientas.cpp">
@@ -128,5 +131,19 @@
     <ClInclude Include="Model\Articulos.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data_files\Archivo_clientes.txt">
+      <Filter>Archivos de origen\data_files</Filter>
+    </Text>
+    <Text Include="data_files\Archivo_Herramientas_stock.txt">
+      <Filter>Archivos de origen\data_files</Filter>
+    </Text>
+    <Text Include="data_files\Archivo_listas_de_compra.txt">
+      <Filter>Archivos de origen\data_files</Filter>
+    </Text>
+    <Text Include="data_files\Archivo_Stock_Ferreteria.txt">
+      <Filter>Archivos de origen\data_files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

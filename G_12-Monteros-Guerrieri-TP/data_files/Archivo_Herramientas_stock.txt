@@ -1,0 +1,11 @@
+Nombre_art , Precio , seguro , precio_dia , cantidad
+martillo , 20000 , 15000 , 1000 , 15
+moladora , 25000 , 15000 , 1100 , 10
+taladro , 30000 , 17000 , 1500 , 2
+lijadora , 20000 , 10000 , 900 , 5
+destornillador_electrico , 15000 , 5000 , 900 , 4
+
+
+
+
+

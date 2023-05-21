@@ -1,0 +1,17 @@
+Nombre , precio , cantidad
+tornillo , 10 , 200
+tarugo , 9 , 200
+alambre , 150 , 200
+cables , 100 , 1000
+adaptador_tipo_a , 100 , 20
+adaptador_tipo_b , 120 , 25
+Mecha_mediana , 50 , 100
+enchufe_de_pared , 50 , 100
+tender_grande , 500 , 10
+cepillo_de_baño , 300 , 15
+caño , 100 , 100
+tuerca , 30 , 700
+tabla_de_planchar , 3000 , 7
+clavos , 5 , 10000
+Barral_de_cortina , 1000 , 20
+lampara , 1000 , 10

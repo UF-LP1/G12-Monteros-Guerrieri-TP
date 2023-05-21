@@ -29,26 +29,28 @@ int main()
 	int eleccion;
 	char seguir_comprando;
 	unsigned int total_pagar=0;
-// BASE_PATH "..\\..\\..\\"
 
 	//declaracion de variables de archivos y lectura de archivos
 
-
+	//C:\\Users\\thmon\\OneDrive\\Documents\\Universidad\\Labo de programacion\\G-12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\Archivo_Stock_Ferreteria.txt
 	fstream leer_stock;
-	leer_stock.open("Archivo_Stock_Ferreteria.txt", ios::in);
+	leer_stock.open("C:\\Users\\thmon\\OneDrive\\Documents\\Universidad\\Labo de programacion\\G-12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\data_files\\Archivo_Stock_Ferreteria.txt", ios::in);
+
 	Lo_de_Juan.set_stock(Leer_stock(leer_stock));
-	leer_stock.close();
+	
 
 	fstream leer_clientes;
-	leer_clientes.open("Archivo_clientes.txt", ios::in);
+	leer_clientes.open("C:\\Users\\thmon\\OneDrive\\Documents\\Universidad\\Labo de programacion\\G-12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\data_files\\Archivo_clientes.txt", ios::in);
+
 	fstream leer_listas_de_compra;
-	leer_listas_de_compra.open("Archivo_listas_de_compra.txt", ios::in);
+	leer_listas_de_compra.open("C:\\Users\\thmon\\OneDrive\\Documents\\Universidad\\Labo de programacion\\G-12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\data_files\\Archivo_listas_de_compra.txt", ios::in);
 
 	Lo_de_Juan.set_cola_clientes(Leer_clientes(leer_clientes, leer_listas_de_compra));
 
 	fstream leer_herramientas;
-	leer_herramientas.open("Archivo_Herramientas_stock.txt");
+	leer_herramientas.open("C:\\Users\\thmon\\OneDrive\\Documents\\Universidad\\Labo de programacion\\G-12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\G_12-Monteros-Guerrieri-TP\\data_files\\Archivo_Herramientas_stock.txt");
 	list<Herramientas> Herramientas_en_stock=Leer_herramientas_stock(leer_herramientas);
+
 	Lo_de_Juan.set_Herramientas_stock(Herramientas_en_stock);
 
 	//Aca empieza la funcionalidad
