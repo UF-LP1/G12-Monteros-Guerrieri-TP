@@ -79,39 +79,42 @@ list<Herramientas> Leer_herramientas_stock(fstream& Herramientas_stock)
 }
 
 
-queue<cliente> Leer_clientes(fstream& cola, fstream& listas_compra)
+queue<cliente> Leer_clientes(fstream& Arch_cola_clientes, fstream& Arch_listas_compra)
 {
-	queue<cliente> Cola_clientes;  // la cola que se retorna
-	char coma = ',';
-	string headers;
 
-	int i;
 
-	if (!(cola.is_open()))
+
+	if (!(Arch_cola_clientes.is_open()))
 	{
 		cout << "no se pudo abrir el archivo" << endl;
 		queue<cliente> error;
 		return error;
 	}
+	char coma = ',';
+	string headers;
+	int j = 0;
+	int i;
 
-	string nombre_aux; //sirve para el nombre del cliente y del articulo para no tener que tener tantas variables
+	string nombre_aux; 
 	unsigned int DNI_aux;
-	unsigned int num_tarjeta_aux;
+	unsigned int num_tarjeta_aux; //auxiliares para el cliente
 	int fondos_aux;
 	bool magnetica_aux;
+
 	string nombre_art_aux;
-	unsigned int cantidad_aux;
+	unsigned int cantidad_aux;  //auxiliares para los articulos
 	unsigned int precio_aux;
+
 	list<Articulos> lista_compra_actual; //auxiliar para leer las listas de compra que corresponderan a cada cliente
+	queue<cliente> Cola_clientes;  // la cola que se retorna
 
-	getline(cola, headers);
-	getline(listas_compra, headers);
+	getline(Arch_cola_clientes, headers);
+	getline(Arch_listas_compra, headers);
+	
+	Arch_cola_clientes >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
+	Arch_listas_compra >> nombre_art_aux >> coma >> precio_aux >> coma >> cantidad_aux;
 
-	cola >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
-
-	listas_compra >> nombre_art_aux >> coma >> precio_aux  >> coma >> cantidad_aux;
-
-	while (cola)
+	while (j<10)
 	{
 		cliente cliente_aux(nombre_aux, DNI_aux, num_tarjeta_aux, fondos_aux, magnetica_aux);
 
@@ -120,12 +123,12 @@ queue<cliente> Leer_clientes(fstream& cola, fstream& listas_compra)
 		{
 			
 
-			if (nombre_aux == "tornillo" || nombre_aux == "tarugo" || nombre_aux == "Mecha" || nombre_aux == "clavos") //una forma rudimentaria de diferenciar las clases
+			if (nombre_art_aux == "tornillo" || nombre_art_aux == "tarugo" || nombre_art_aux == "Mecha" || nombre_art_aux == "clavos") //una forma rudimentaria de diferenciar las clases
 			{
 				Art_ferr aux_ferr(nombre_art_aux, precio_aux, cantidad_aux);
 				lista_compra_actual.push_back(aux_ferr);
 			}
-			else if (nombre_aux == "cables" || nombre_aux == "adaptador tipo a" || nombre_aux == "adaptador tipo b" || nombre_aux == "enchufe de pared" || nombre_aux == "lampara")
+			else if (nombre_art_aux == "cables" || nombre_art_aux == "adaptador tipo a" || nombre_art_aux == "adaptador tipo b" || nombre_art_aux == "enchufe de pared" || nombre_art_aux == "lampara")
 			{
 				Art_electricos aux_elec(nombre_art_aux, precio_aux, cantidad_aux);
 				lista_compra_actual.push_back(aux_elec);
@@ -135,16 +138,18 @@ queue<cliente> Leer_clientes(fstream& cola, fstream& listas_compra)
 				Art_Bazar aux_bazar(nombre_art_aux, precio_aux, cantidad_aux);
 				lista_compra_actual.push_back(aux_bazar);
 			}
-			listas_compra >> nombre_aux >> coma >> cantidad_aux >> coma >> precio_aux;
+
+			Arch_listas_compra >> nombre_art_aux >> coma >> precio_aux >> coma >> cantidad_aux;
 		}
+
 		cliente_aux.set_lista_compra(lista_compra_actual);
-
-		cola >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
-
 		Cola_clientes.push(cliente_aux);
+
+		Arch_cola_clientes >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
+		j++;
 	}
 
-	listas_compra.close();
-	cola.close();
+	Arch_listas_compra.close();
+	Arch_cola_clientes.close();
 	return Cola_clientes;
 }
