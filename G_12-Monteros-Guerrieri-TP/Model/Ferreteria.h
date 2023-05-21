@@ -54,6 +54,7 @@ public:
     void set_cola_clientes(queue<cliente> sclientes);
     
     void set_Herramientas_stock(list<Herramientas> slista_Herra);
+
 };
 
 #endif //_FERRETERIA_H

@@ -69,16 +69,24 @@ void Ferreteria::terminar_dia()
     else if (dia == "Domingo")
         dia = "Lunes";
 }
+
 void Ferreteria::set_stock(list<Articulos> Art_en_stock)
 {
-    this->stock.swap(Art_en_stock);
+    list<Articulos>::iterator it=this->stock.begin();
+
+    this->stock.insert(it,Art_en_stock.begin(),Art_en_stock.end());
+
 }
 void Ferreteria::set_cola_clientes(queue<cliente> sclientes)
 {
-    this->cola_clientes = sclientes;
+    swap(this->cola_clientes, sclientes);
 }
 void Ferreteria::set_Herramientas_stock(list<Herramientas> slista_Herra)
 {
-    this->Herr_en_stock = slista_Herra;
+    list<Herramientas>::iterator it = this->Herr_en_stock.begin();
+
+    this->Herr_en_stock.insert(it, slista_Herra.begin(), slista_Herra.end());
 }
+
+
 string Ferreteria::dia = "Lunes";

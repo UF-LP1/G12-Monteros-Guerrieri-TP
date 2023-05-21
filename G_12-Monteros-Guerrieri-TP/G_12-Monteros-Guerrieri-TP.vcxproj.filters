@@ -129,18 +129,4 @@
       <Filter>Archivos de origen</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="Model\Archivo_clientes.txt">
-      <Filter>Archivos de origen</Filter>
-    </Text>
-    <Text Include="Model\Archivo_Stock_Ferreteria.txt">
-      <Filter>Archivos de origen</Filter>
-    </Text>
-    <Text Include="Model\Archivo_listas_de_compra.txt">
-      <Filter>Archivos de origen</Filter>
-    </Text>
-    <Text Include="Model\Archivo_Herramientas_stock.txt">
-      <Filter>Archivos de origen</Filter>
-    </Text>
-  </ItemGroup>
 </Project>

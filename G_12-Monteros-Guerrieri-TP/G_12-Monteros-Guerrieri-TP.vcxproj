@@ -61,12 +61,6 @@
     <ClInclude Include="Model\Servicio.h" />
     <ClInclude Include="Model\TURNOS.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="Model\Archivo_clientes.txt" />
-    <Text Include="Model\Archivo_Herramientas_stock.txt" />
-    <Text Include="Model\Archivo_listas_de_compra.txt" />
-    <Text Include="Model\Archivo_Stock_Ferreteria.txt" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

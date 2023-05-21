@@ -29,8 +29,10 @@ int main()
 	int eleccion;
 	char seguir_comprando;
 	unsigned int total_pagar=0;
+// BASE_PATH "..\\..\\..\\"
 
 	//declaracion de variables de archivos y lectura de archivos
+
 
 	fstream leer_stock;
 	leer_stock.open("Archivo_Stock_Ferreteria.txt", ios::in);

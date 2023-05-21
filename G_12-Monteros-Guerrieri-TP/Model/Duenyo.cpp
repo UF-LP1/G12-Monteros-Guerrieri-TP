@@ -22,41 +22,6 @@ void Duenyo::Hacer_inventario() {
 
 }
 
-void Duenyo::Atender_clientes(Ferreteria& Lo_de_Juan, cliente& cliente_actual, Cerrajero Jose, Plomero Mario, Despachante luigi, int eleccion, list<Articulos>& Articulos_vendidos) {
-                                                                                                  
-    
-        //1=comprar articulos
-        //2=contratar cerrajero
-        //3=contratar plomero
-        //4=pedir envio
-        //5=alquilar
-        //6=cambiar producto
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //no se necesita un default ni un ciclo porque la variable qeu se usa en el switch es recibida como parametro
-}
 
 unsigned int Duenyo::generarPresupuesto(list<Articulos> lista_compra)
 {

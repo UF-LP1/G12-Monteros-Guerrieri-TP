@@ -62,7 +62,9 @@ void cliente::set_numero_cliente(unsigned int snumero_cliente)
 
  void cliente::set_lista_compra(list<Articulos> slista_compra)
  {
-     this->lista_compra = slista_compra;
+     list<Articulos>:: iterator it =this->lista_compra.begin();
+
+     this->lista_compra.insert(it, slista_compra.begin(), slista_compra.end());
  }
 
 void cliente::liberar_memoria()

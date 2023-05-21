@@ -25,8 +25,6 @@ void Cobrar_a_Cliente();
     
 void Hacer_inventario();
     
-void Atender_clientes(Ferreteria& Lo_de_Juan,cliente& cliente_actual, Cerrajero Jose, Plomero mario, Despachante luigi, int eleccion, list<Articulos>& Articulos_vendidos);
-
 unsigned int generarPresupuesto(list<Articulos> lista_compra);
 
 void Imprimir_factura(list<Articulos> vendidos, string nombre_cliente, unsigned int total);

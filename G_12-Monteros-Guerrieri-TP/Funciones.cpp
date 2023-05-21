@@ -73,6 +73,7 @@ list<Herramientas> Leer_herramientas_stock(fstream& Herramientas_stock)
 	return lista_retorno;
 }
 
+
 queue<cliente> Leer_clientes(fstream& cola, fstream& listas_compra)
 {
 	queue<cliente> Cola_clientes;  // la cola que se retorna
