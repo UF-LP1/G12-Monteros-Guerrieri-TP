@@ -6,7 +6,6 @@
 #include "Model/Art_ferr.h"
 #include "Model/Art_electricos.h"
 #include "Model/Herramientas.h"
-#include <fstream>
 #include "Funciones.h"
 
 using namespace std;
@@ -45,6 +44,11 @@ int main()
 
 	Lo_de_Juan.set_cola_clientes(Leer_clientes(leer_clientes, leer_listas_de_compra));
 
+	fstream leer_herramientas;
+	leer_herramientas.open("Archivo_Herramientas_stock.txt");
+	list<Herramientas> Herramientas_en_stock=Leer_herramientas_stock(leer_herramientas);
+	Lo_de_Juan.set_Herramientas_stock(Herramientas_en_stock);
+
 	//Aca empieza la funcionalidad
 
 	do {
@@ -56,8 +60,6 @@ int main()
 				cout << "¿Que se le ofrece?" << endl;
 				cout << "1) Comprar articulos" << endl << "2) Contratar cerrajero" << endl << "3) Contratar plomero" << endl << "4)Envio a domicilio " << "5)Alquilar una herramienta" << endl << "6) Cambiar un producto defectuoso" << endl;
 				cin >> eleccion;
-
-				//Juan.Atender_clientes(Lo_de_Juan,cliente_actual,Jose,Mario,Luigi, eleccion,Articulos_vendidos);
 
 				switch (eleccion)
 				{

@@ -11,7 +11,6 @@ list<Articulos> Leer_stock(fstream& Stock)
 	string nombre_aux;
 	unsigned int cantidad_aux;
 	unsigned int precio_aux;
-	bool herramienta_aux;
 
 	if (!(Stock.is_open()))
 	{
@@ -42,6 +41,36 @@ list<Articulos> Leer_stock(fstream& Stock)
 		}
 	}
 	return lectura_stock;
+}
+
+list<Herramientas> Leer_herramientas_stock(fstream& Herramientas_stock)
+{
+	if (!(Herramientas_stock.is_open()))
+	{
+		cout << "no se pudo abrir el archivo" << endl;
+		list<Herramientas> lista_vacia;
+		return lista_vacia;
+	}
+
+	list<Herramientas> lista_retorno;
+	char coma = ',';
+	string nombre_aux;
+	string headers;
+	unsigned int cantidad_aux;
+	unsigned int precio_aux;
+	unsigned int seguro_aux;
+	unsigned int precio_dia_aux;
+
+	getline(Herramientas_stock, headers);
+	//string nnombre, unsigned int nprecio, unsigned int ncantidad, unsigned int cseguro, unsigned int cprecio_dia
+	while (Herramientas_stock)
+	{
+		Herramientas_stock >> nombre_aux >> coma >> precio_aux >> coma >> seguro_aux >> coma >> precio_dia_aux >> coma >> cantidad_aux;
+
+		Herramientas agregado(nombre_aux, precio_aux, cantidad_aux, seguro_aux, precio_dia_aux);
+		lista_retorno.push_back(agregado);
+	}
+	return lista_retorno;
 }
 
 queue<cliente> Leer_clientes(fstream& cola, fstream& listas_compra)

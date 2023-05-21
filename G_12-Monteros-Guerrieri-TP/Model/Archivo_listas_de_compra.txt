@@ -2,7 +2,7 @@ Nombre, precio, cantidad
 tornillo, 0, 10         
 tarugo, 0, 4
 tornillo, 0, 10            
-Martillo, 0, 1         
+tornillo,0,50         
 cables", 0, 12          
 adaptador tipo a, 0, 1 
 adaptdor tipo b, 0, 2  
@@ -10,8 +10,8 @@ Mecha mediana, 0, 3
 enchufe de pared, 0, 1  
 tender grande, 0, 1     
 cepillo de baño, 0, 2  
-taladro, 0, 1, true          
-moladora, 0, 1, true      
+enchufe de pared,0,3          
+clavos,0,50  
 Mecha mediana, 0, 100   
 tabla de planchar, 0, 2
 tarugo, 0, 400 

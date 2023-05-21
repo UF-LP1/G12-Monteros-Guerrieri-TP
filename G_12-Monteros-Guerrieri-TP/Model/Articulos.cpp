@@ -31,9 +31,6 @@ void Articulos::set_cantidad(unsigned int scantidad)
     this->cantidad = scantidad;
 }
 
-/**
- * @param unsigned int
- */
 void Articulos::restar_cantidad( unsigned int cantidad_restada) {
 
     this->cantidad = this->cantidad - cantidad_restada;

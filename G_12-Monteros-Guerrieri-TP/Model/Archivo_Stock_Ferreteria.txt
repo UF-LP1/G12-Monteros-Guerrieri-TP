@@ -1,7 +1,7 @@
 Nombre, precio, cantidad
 tornillo, 10, 200          
 tarugo, 9, 200             
-Martillo, 1500, 40        
+alambre, 150, 200        
 cables", 100, 1000          
 adaptador tipo a, 100, 20  
 adaptador tipo b, 120, 25   
@@ -9,8 +9,8 @@ Mecha mediana, 50, 100
 enchufe de pared, 50, 100 
 tender grande, 500, 10     
 cepillo de baño, 300, 15   
-taladro, 15000, 9          
-moladora, 20000, 10        
+caño,100,100          
+tuerca, 30, 700      
 tabla de planchar, 3000, 7 
 clavos, 5, 10000           
 Barral de cortina, 1000, 20

@@ -35,7 +35,6 @@ protected:
     const string Nombre_art;
     unsigned int Precio;
     unsigned int cantidad;
-    bool Herramienta;
    
 };
 

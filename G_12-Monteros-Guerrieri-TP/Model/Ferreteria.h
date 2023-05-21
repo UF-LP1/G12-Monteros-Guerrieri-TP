@@ -14,7 +14,7 @@
 using namespace std;
 class Ferreteria {
 
-  
+    friend class duenyo;
 
 protected: 
     const string Nombre;
@@ -22,6 +22,7 @@ protected:
     const unsigned int numero_ferreteria;
     list<Articulos> stock;
     queue<cliente> cola_clientes;
+    list<Herramientas> Herr_en_stock;
 
 
 public:
@@ -51,6 +52,8 @@ public:
     static string dia;
 
     void set_cola_clientes(queue<cliente> sclientes);
+    
+    void set_Herramientas_stock(list<Herramientas> slista_Herra);
 };
 
 #endif //_FERRETERIA_H

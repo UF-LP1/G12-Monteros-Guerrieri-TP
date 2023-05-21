@@ -11,8 +11,6 @@
  */
 Ferreteria::Ferreteria(string cNombre, string cDireccion, unsigned int cNum) : Nombre(cNombre), Direccion(cDireccion), numero_ferreteria(cNum)
 {
-
-
 }
 Ferreteria::~Ferreteria()
 {
@@ -73,10 +71,14 @@ void Ferreteria::terminar_dia()
 }
 void Ferreteria::set_stock(list<Articulos> Art_en_stock)
 {
-
+    this->stock.swap(Art_en_stock);
 }
 void Ferreteria::set_cola_clientes(queue<cliente> sclientes)
 {
     this->cola_clientes = sclientes;
+}
+void Ferreteria::set_Herramientas_stock(list<Herramientas> slista_Herra)
+{
+    this->Herr_en_stock = slista_Herra;
 }
 string Ferreteria::dia = "Lunes";
