@@ -35,10 +35,11 @@ int Buscar_stock(list<Articulos> Art_en_stock, string buscado);
 
 Articulos Entregar_articulo(cliente& cliente_actual, list<Articulos>& Art_en_stock, unsigned int cant_deseada, string vendido);
 
-Articulos Buscar_herramienta(list<Articulos> Art_en_stock,string buscada);
-protected: 
-    
+Herramientas vender_Herramienta(cliente cliente_actual, string Herramienta_deseada, list<Herramientas> Herr_en_stock);
 
+Herramientas Busca_Herramienta(string Herramienta_buscada, list<Herramientas> Herr_en_stock);
+
+friend class Despachante;
 private: 
     const string Nombre;
 

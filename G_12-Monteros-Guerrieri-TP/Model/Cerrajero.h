@@ -21,9 +21,7 @@ public:
     
     unsigned int get_alcance();
 
-    void ofrecer_servicio(cliente cliente_actual) ;
-
-
+    void ofrecer_servicio(cliente cliente_actual, unsigned int primer_eleccion, unsigned int segunda_eleccion);
 private:
 
 

@@ -118,17 +118,34 @@ void Duenyo::vender_articulos(list<Articulos> stock, cliente &cliente_actual, li
   //este no necesita chequear si no se encuentra el articulo porque eso es chequeado antes de llamar al metodo
  }
 
- Articulos Duenyo::Buscar_herramienta(list<Articulos> Art_en_stock, string buscada)
+ Herramientas Duenyo::vender_Herramienta(cliente cliente_actual, string Herramienta_deseada, list<Herramientas> Herr_en_stock)
  {
-     list<Articulos>::iterator aux = Art_en_stock.begin();
-
-     while (aux != Art_en_stock.end())
+     Herramientas aux = Busca_Herramienta(Herramienta_deseada, Herr_en_stock);
+     if (aux.get_nombre() == "Nada")
      {
-         if (aux->get_nombre_art() == buscada)
-             return (*aux);
-
-         aux++;
+         //agregar exception
      }
-     
+     else
+     {
+         cliente_actual.incremento_deuda(aux.get_precio());
+         return aux;
+     }
  }
 
+ Herramientas Duenyo::Busca_Herramienta(string Herramienta_buscada, list<Herramientas> Herr_en_stock)
+ {
+     list<Herramientas>::iterator indice = Herr_en_stock.begin();
+
+     while (indice != Herr_en_stock.end())
+     {
+         if (indice->get_nombre() == Herramienta_buscada)
+             return (*indice);
+         indice++;
+     }
+     Herramientas error("Nada",0,0,0,0);
+     return error;
+ }
+
+
+
+ 

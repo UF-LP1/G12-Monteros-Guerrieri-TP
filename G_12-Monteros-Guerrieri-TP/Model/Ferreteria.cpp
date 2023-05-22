@@ -88,5 +88,10 @@ void Ferreteria::set_Herramientas_stock(list<Herramientas> slista_Herra)
     this->Herr_en_stock.insert(it, slista_Herra.begin(), slista_Herra.end());
 }
 
+list<Herramientas> Ferreteria::get_herramientas()
+{
+    return this->Herr_en_stock;
+}
+
 
 string Ferreteria::dia = "Lunes";

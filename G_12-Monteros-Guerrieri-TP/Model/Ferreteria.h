@@ -55,6 +55,7 @@ public:
     
     void set_Herramientas_stock(list<Herramientas> slista_Herra);
 
+    list<Herramientas> get_herramientas();
 };
 
 #endif //_FERRETERIA_H

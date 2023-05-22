@@ -24,7 +24,7 @@ void set_disponibilidad( bool);
     
 bool get_disponibilidad();
 
-virtual void ofrecer_servicio(cliente cliente_actual)=0;
+virtual void ofrecer_servicio(cliente cliente_actual, unsigned int primer_eleccion, unsigned int segunda_eleccion)=0;
 
 
 protected: 

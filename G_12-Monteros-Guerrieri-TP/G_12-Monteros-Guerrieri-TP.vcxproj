@@ -62,7 +62,7 @@
     <ClInclude Include="Model\TURNOS.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data_files\Archivo_clientes.txt" />
+    <Text Include="data_files\Archivo_Cola_Clientes.txt" />
     <Text Include="data_files\Archivo_Herramientas_stock.txt" />
     <Text Include="data_files\Archivo_listas_de_compra.txt" />
     <Text Include="data_files\Archivo_Stock_Ferreteria.txt" />

@@ -133,9 +133,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data_files\Archivo_clientes.txt">
-      <Filter>Archivos de origen\data_files</Filter>
-    </Text>
     <Text Include="data_files\Archivo_Herramientas_stock.txt">
       <Filter>Archivos de origen\data_files</Filter>
     </Text>
@@ -143,6 +140,9 @@
       <Filter>Archivos de origen\data_files</Filter>
     </Text>
     <Text Include="data_files\Archivo_Stock_Ferreteria.txt">
+      <Filter>Archivos de origen\data_files</Filter>
+    </Text>
+    <Text Include="data_files\Archivo_Cola_Clientes.txt">
       <Filter>Archivos de origen\data_files</Filter>
     </Text>
   </ItemGroup>

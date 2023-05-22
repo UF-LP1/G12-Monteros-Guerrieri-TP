@@ -32,7 +32,13 @@ unsigned int Despachante::get_capacidad()
     return this->capacidad_kg;
 }
 
-void Despachante::ofrecer_servicio(cliente cliente_actual)
+void Despachante::ofrecer_servicio(cliente cliente_actual, unsigned int primer_eleccion, unsigned int segunda_eleccion)
 {
+    //esta funcion es declarada para que no se considere a despachante como una clase abstracta, salta un error
+}
+
+void Despachante::Llevar_pedido(string direccion_cliente, list<Articulos> lista_del_cliente)
+{
+
 }
 

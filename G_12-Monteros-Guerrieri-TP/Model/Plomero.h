@@ -11,10 +11,10 @@
 
 class Plomero: public Empleado {
 public: 
-    Plomero();
+    Plomero(unsigned int calcance);
     ~Plomero();
 
-    void ofrecer_servicio(cliente cliente_actual);
+    void ofrecer_servicio(cliente cliente_actual, unsigned int primer_eleccion, unsigned int reparacion);
 protected: 
     
 

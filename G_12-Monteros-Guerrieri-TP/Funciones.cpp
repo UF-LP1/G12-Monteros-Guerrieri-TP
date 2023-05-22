@@ -114,7 +114,7 @@ queue<cliente> Leer_clientes(fstream& Arch_cola_clientes, fstream& Arch_listas_c
 	Arch_cola_clientes >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
 	Arch_listas_compra >> nombre_art_aux >> coma >> precio_aux >> coma >> cantidad_aux;
 
-	while (j<10)
+	do
 	{
 		cliente cliente_aux(nombre_aux, DNI_aux, num_tarjeta_aux, fondos_aux, magnetica_aux);
 
@@ -146,8 +146,7 @@ queue<cliente> Leer_clientes(fstream& Arch_cola_clientes, fstream& Arch_listas_c
 		Cola_clientes.push(cliente_aux);
 
 		Arch_cola_clientes >> nombre_aux >> coma >> DNI_aux >> coma >> num_tarjeta_aux >> coma >> fondos_aux >> coma >> magnetica_aux;
-		j++;
-	}
+	} while (Arch_cola_clientes);
 
 	Arch_listas_compra.close();
 	Arch_cola_clientes.close();

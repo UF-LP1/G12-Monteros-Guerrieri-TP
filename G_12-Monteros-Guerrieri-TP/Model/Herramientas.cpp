@@ -7,7 +7,7 @@
 
 
 
-Herramientas::Herramientas(string nnombre, unsigned int nprecio, unsigned int ncantidad, unsigned int cseguro, unsigned int cprecio_dia): Nombre_art(nnombre)
+Herramientas::Herramientas(string nnombre, unsigned int nprecio, unsigned int ncantidad, unsigned int cseguro, unsigned int cprecio_dia): Nombre(nnombre)
 {
 	this->Precio = nprecio;
 	this->cantidad = ncantidad;
@@ -17,4 +17,14 @@ Herramientas::Herramientas(string nnombre, unsigned int nprecio, unsigned int nc
 
 Herramientas::~Herramientas()
 {
+}
+
+string Herramientas::get_nombre()
+{
+	return this->Nombre;
+}
+
+unsigned int Herramientas::get_precio()
+{
+	return this->Precio;
 }

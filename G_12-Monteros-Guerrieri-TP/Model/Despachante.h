@@ -24,7 +24,9 @@ string get_vehiculo();
     
 unsigned int get_capacidad();
 
-void ofrecer_servicio(cliente cliente_actual);
+void ofrecer_servicio(cliente cliente_actual, unsigned int primer_eleccion, unsigned int segunda_eleccion);
+
+void Llevar_pedido(string direccion_cliente, list<Articulos> lista_del_cliente);
  
 private: 
     string vehiculo;

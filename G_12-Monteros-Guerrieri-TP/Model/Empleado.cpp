@@ -35,6 +35,6 @@ bool Empleado::get_disponibilidad() {
     return this->disponible;
 }
 
-void Empleado::ofrecer_servicio(cliente cliente_actual)
+void Empleado::ofrecer_servicio(cliente cliente_actual, unsigned int primer_eleccion, unsigned int segunda_eleccion)
 {
 }
